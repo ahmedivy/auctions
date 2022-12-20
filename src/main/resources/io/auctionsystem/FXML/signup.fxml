@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXStepper?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="signupRootPane" prefHeight="921.0" prefWidth="638.0" styleClass="signupRootPane" stylesheets="@../CSS/loginsignupstyles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.auctionsystem.controllers.SignupController">
+   <children>
+      <MFXStepper fx:id="stepper" baseColor="WHITE" layoutY="245.0" prefHeight="679.0" prefWidth="638.0" progressBarBackground="#eab85d" progressColor="BLACK" styleClass="stepper" />
+      <Label layoutX="254.0" layoutY="162.0" styleClass="header" text="Signup">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="130.0" prefWidth="640.0" styleClass="title">
+         <children>
+            <ImageView fitHeight="120.0" fitWidth="230.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="410.0" layoutY="49.0" text="Already have account?" textFill="WHITE" />
+            <MFXButton fx:id="loginButton" layoutX="554.0" layoutY="44.0" styleClass="loginButton" text="Login" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

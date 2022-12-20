@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="226.0" prefWidth="484.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.auctionsystem.controllers.SortingMenuController">
+   <children>
+      <Label layoutX="28.0" layoutY="33.0" prefHeight="18.0" prefWidth="153.0" text="Sort By :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <MFXRadioButton fx:id="radio1" layoutX="48.0" layoutY="90.0" text="Price (High to Low)">
+         <toggleGroup>
+            <ToggleGroup fx:id="sort" />
+         </toggleGroup>
+      </MFXRadioButton>
+      <MFXRadioButton fx:id="radio2" layoutX="48.0" layoutY="130.0" text="Price (Low to High)" toggleGroup="$sort" />
+      <MFXRadioButton fx:id="radio3" layoutX="216.0" layoutY="90.0" text="Newest" toggleGroup="$sort" />
+      <MFXRadioButton fx:id="radio4" layoutX="216.0" layoutY="130.0" text="Oldest" toggleGroup="$sort" />
+      <MFXRadioButton fx:id="radio5" layoutX="307.0" layoutY="90.0" text="Ending Soon" toggleGroup="$sort" />
+      <MFXRadioButton fx:id="radio6" layoutX="307.0" layoutY="130.0" text="Ending Later" toggleGroup="$sort" />
+      <MFXButton fx:id="okButton" layoutX="397.0" layoutY="168.0" text="Sort" />
+   </children>
+</AnchorPane>

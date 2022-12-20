@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.backgroudPane {
+    -fx-background-color: transparent;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
+
+.mainPane {
+    -fx-border-radius: 10px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
+
+.loginImageView {
+    -fx-border-radius: 10px;
+}
+
+.stepper {
+    -fx-background-color: white;
+    -fx-border-radius: 10px;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
+
+.fields {
+    -fx-padding: 10px;
+    -fx-border-color: #000000;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-pref-width: 278.0;
+    -fx-pref-height: 50.0;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
+
+.stepper .fields {
+    -fx-padding: 10px;
+    -fx-border-color: #000000;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-pref-width: 350.0;
+    -fx-pref-height: 50.0;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
+
+.fields .floating-text {
+    -fx-font-size: 15;
+    -fx-text-fill: #000000;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
+
+.stepper .buttons-box .mfx-button{
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-pref-width: 150.0;
+    -fx-pref-height: 50.0;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
+.myButtons {
+    -fx-border-radius: 10px;
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
+
+.outline-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #000000;
+    -fx-border-radius: 3;
+    -fx-text-fill: #000000;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
+
+.outline-button:hover,
+.outline-button:focused {
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+}
+
+.validationLabel {
+    -fx-font-size: 11;
+    -fx-text-fill: #ff0000;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
+
+.fields:invalid {
+    -fx-border-color: -mfx-red;
+}
+
+.fields:invalid .floating-text {
+    -fx-text-fill: -mfx-red;
+}
+
+.fields:invalid .mfx-font-icon {
+    -mfx-color: -mfx-red;
+}
+
+.signupRootPane {
+    -fx-background-color: #ffffff;
+    -fx-font-family: 'Varela Round', sans-serif;
+
+}
+
+.signupRootPane .loginButton {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #ffffff;
+}
+
+.signupRootPane .loginButton:hover {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-border-color: #000000;
+}
+
+.title {
+    -fx-background-color: #000000;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
+
+.popup {
+    -fx-background-color: black;
+    -fx-padding: 10;
+    -fx-border-color: black;
+    -fx-border-width: 5;
+    -fx-font-size: 16;
+    -fx-text-fill: white;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
+
+.header {
+    -fx-font-family: 'Varela Round', sans-serif;
+}

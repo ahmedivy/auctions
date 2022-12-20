@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="310.0" stylesheets="@../CSS/cardstyles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.auctionsystem.controllers.CardController">
+   <children>
+      <AnchorPane prefHeight="532.0" prefWidth="310.0" styleClass="cardPane">
+         <children>
+            <ImageView fx:id="image" fitHeight="314.0" fitWidth="310.0" layoutX="1.0" pickOnBounds="true" styleClass="image">
+               <image>
+                  <Image url="@../Images/product.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="title" layoutX="21.0" layoutY="314.0" prefHeight="40.0" prefWidth="269.0" text="Title">
+               <font>
+                  <Font name="Berlin Sans FB" size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="price" layoutX="140.0" layoutY="373.0" prefHeight="40.0" prefWidth="108.0" text="30.0 $" textFill="#998817">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalBids" layoutX="18.0" layoutY="421.0" prefHeight="22.0" prefWidth="129.0" text="Total Bids :   12">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="465.0" text="Ending In : ">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLeft" layoutX="122.0" layoutY="461.0" prefHeight="30.0" prefWidth="146.0" text="12 D 07 Hrs">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="categoryLabel" alignment="CENTER" layoutX="207.0" layoutY="302.0" prefHeight="22.0" prefWidth="82.0" styleClass="categoryLabel" text="Category" />
+            <Label fx:id="popularNowLabel" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="22.0" prefWidth="90.0" styleClass="popularLabel" text="Popular Now" />
+            <Label layoutX="19.0" layoutY="382.0" text="Current Price :">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,29 @@
+.cardPane {
+    -fx-background-color: white;
+    -fx-background-radius: 40;
+}
+
+.cardPane:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-background-color: silver;
+}
+
+.image {
+    -fx-background-color: rgba(208, 208, 208, 0.97);
+    -fx-background-radius: 40;
+    -fx-padding: 10;
+    -fx-border-radius: 40;
+}
+
+.categoryLabel {
+    -fx-background-color: #b08b29;
+    -fx-background-radius: 10;
+    -fx-text-alignment: center;
+}
+
+.popularLabel {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-text-alignment: center;
+}

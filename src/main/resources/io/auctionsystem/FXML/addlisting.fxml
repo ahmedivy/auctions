@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="788.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.auctionsystem.controllers.AddListingController">
+   <children>
+      <Label alignment="CENTER" layoutX="39.0" layoutY="35.0" prefHeight="35.0" prefWidth="535.0" text="Add Listing">
+         <font>
+            <Font name="Berlin Sans FB" size="31.0" />
+         </font>
+      </Label>
+      <MFXTextField fx:id="name" floatMode="BORDER" floatingText="  Title  " layoutX="144.0" layoutY="121.0" prefHeight="50.0" prefWidth="325.0" />
+      <MFXComboBox fx:id="category" floatMode="BORDER" floatingText="  Category  " layoutX="144.0" layoutY="205.0" prefHeight="50.0" prefWidth="326.0" />
+      <MFXTextField fx:id="startingprice" floatMode="BORDER" floatingText="  Starting Price  " layoutX="144.0" layoutY="293.0" prefHeight="50.0" prefWidth="325.0" />
+      <MFXDatePicker fx:id="enddate" floatMode="BORDER" floatingText="  End Date  " layoutX="144.0" layoutY="385.0" prefHeight="50.0" prefWidth="326.0" />
+      <MFXTextField fx:id="description" alignment="TOP_LEFT" floatMode="BORDER" floatingText="  Description  " layoutX="144.0" layoutY="473.0" prefHeight="72.0" prefWidth="326.0" />
+      <MFXButton fx:id="chooseImageButton" layoutX="374.0" layoutY="573.0" text="Choose Image" />
+      <Label fx:id="imageLabel" layoutX="144.0" layoutY="572.0" prefHeight="26.0" prefWidth="196.0" text="File Upload Label" />
+      <MFXButton fx:id="addButton" layoutX="431.0" layoutY="626.0" text="Add" />
+   </children>
+</AnchorPane>

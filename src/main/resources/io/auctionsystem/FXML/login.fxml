@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="920.0" styleClass="backgroudPane" stylesheets="@../CSS/loginsignupstyles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.auctionsystem.controllers.LoginController">
+         <children>
+      <AnchorPane layoutY="-1.0" prefHeight="660.0" prefWidth="515.0">
+         <children>
+            <ImageView fitHeight="660.0" fitWidth="515.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/loginpageimage.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+            <MFXTextField fx:id="usernameField" floatMode="BORDER" floatingText="  Username  " layoutX="576.0" layoutY="288.0" prefHeight="50.0" prefWidth="278.0" styleClass="fields">
+               <font>
+                  <Font name="Verdana" size="13.0" />
+               </font></MFXTextField>
+            <MFXPasswordField fx:id="passwordField" floatMode="BORDER" floatingText="  Password  " layoutX="576.0" layoutY="373.0" prefHeight="50.0" prefWidth="278.0" styleClass="fields">
+               <font>
+                  <Font size="13.0" />
+               </font></MFXPasswordField>
+            <MFXButton fx:id="loginButton" layoutX="777.0" layoutY="456.0" prefHeight="33.0" prefWidth="72.0" styleClass="myButtons" text="Login" />
+            <MFXButton fx:id="forgotPassButton" layoutX="576.0" layoutY="460.0" text="Forgot Password?">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></MFXButton>
+            <Label fx:id="pwValidLabel" layoutX="582.0" layoutY="424.0" prefHeight="18.0" prefWidth="278.0" styleClass="validationLabel" text="Label" visible="false" />
+            <Label fx:id="unValidLabel" layoutX="582.0" layoutY="340.0" prefHeight="18.0" prefWidth="278.0" styleClass="validationLabel" text="Label" visible="false" />
+            <Text layoutX="652.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="header" text="Login">
+               <font>
+                  <Font size="51.0" />
+               </font>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.10999999940395355" green="0.07719298452138901" blue="0.11578947305679321" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.1894736886024475" green="0.16023391485214233" blue="0.11929824203252792" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Label layoutX="681.0" layoutY="30.0" prefHeight="18.0" prefWidth="150.0" text="Didn't have account ?" />
+            <MFXButton fx:id="signupButton" layoutX="832.0" layoutY="26.0" styleClass="outline-button" text="Signup" />
+         </children>
+      </AnchorPane>

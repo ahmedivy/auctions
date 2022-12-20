@@ -1,0 +1,159 @@
+package io.auctionsystem.controllers;
+
+import io.auctionsystem.App;
+import io.auctionsystem.classes.*;
+import io.github.palexdev.materialfx.controls.MFXButton;
+import io.github.palexdev.materialfx.controls.MFXScrollPane;
+import io.github.palexdev.materialfx.controls.MFXTextField;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
+
+import java.net.URL;
+import java.time.LocalDateTime;
+import java.util.ResourceBundle;
+
+public class ListingController implements Initializable {
+
+    @FXML
+    private Label activeLabel;
+
+    @FXML
+    private MFXTextField bidField;
+
+    @FXML
+    private Label bidValidationLabel;
+
+    @FXML
+    private Label categoryLabel;
+
+    @FXML
+    private MFXTextField commentField;
+
+    @FXML
+    private MFXButton commentPostButton;
+
+    @FXML
+    private Label descriptionLabel;
+
+    @FXML
+    private Label endLabel;
+
+    @FXML
+    private ImageView image;
+
+    @FXML
+    private MFXButton placeBidButton;
+
+    @FXML
+    private Label popularNowLabel;
+
+    @FXML
+    private Label priceLabel;
+
+    @FXML
+    private Label startLabel;
+
+    @FXML
+    private Label titleLabel;
+
+    @FXML
+    private Label totalBidsLabel;
+
+    @FXML
+    private Label userLabel;
+
+    @FXML
+    private MFXScrollPane commentsPane;
+
+    @FXML
+    private Label priceTagLabel;
+
+    private final DataSingleton data = DataSingleton.getInstance();
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
+
+    public void setData(Listing listing) {
+        titleLabel.setText(listing.getProduct().getName());
+        descriptionLabel.setText(listing.getProduct().getDescription());
+        priceLabel.setText(String.valueOf(listing.getCurrentPrice()));
+        totalBidsLabel.setText(String.valueOf(listing.getBids().size()));
+        categoryLabel.setText(listing.getProduct().getCategory());
+        image.setImage(new Image(listing.getImageSrc()));
+//        startLabel.setText(listing.getStartTime().format("dd/MM/yyyy HH:mm"));
+//        endLabel.setText(listing.getEndTime().format("dd/MM/yyyy HH:mm"));
+        userLabel.setText(listing.getSeller().getName());
+        activeLabel.setText(listing.isActive() ? "Active" : "Sold");
+        popularNowLabel.setVisible(listing.getBids().size() > 5);
+        if (!listing.isActive()) {
+            priceLabel.setVisible(false);
+            priceTagLabel.setText(String.format("Winner is %s", listing.getWinner().getName()));
+            bidField.setVisible(false);
+            placeBidButton.setVisible(false);
+            popularNowLabel.setVisible(false);
+        }
+        VBox commentsBox = new VBox();
+        commentsBox.setAlignment(Pos.TOP_LEFT);
+        commentsBox.setSpacing(0);
+        for (Comment comment:listing.getComments()) {
+            FXMLLoader commentRoot = new FXMLLoader();
+            commentRoot.setLocation(App.class.getResource("FXML/comment.fxml"));
+            try {
+                commentsBox.getChildren().add(commentRoot.load());
+                CommentController commentController = commentRoot.getController();
+                commentController.setData(comment);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        commentsPane.setContent(commentsBox);
+
+        // Adding Event Listeners
+        placeBidButton.setOnAction(event -> {
+            try {
+                double bid = Double.parseDouble(bidField.getText());
+                if (bid > listing.getCurrentPrice()) {
+                    listing.setCurrentPrice(bid);
+                    priceLabel.setText(String.valueOf(bid));
+                    listing.getBids().add(
+                            new Bid(
+                                    bid,
+                                    data.getAuctionSystem().getAuthenticatedUser(),
+                                    LocalDateTime.now()
+                            )
+                    );
+                    bidValidationLabel.setText("Bid placed successfully");
+
+                } else {
+                    bidValidationLabel.setText("Bid must be greater than current price");
+                }
+            } catch (Exception e) {
+                bidValidationLabel.setText("Invalid bid");
+            }
+        });
+
+        commentPostButton.setOnAction(event -> {
+            if (commentField.getText().length() > 0) {
+                listing.getComments().add(
+                        new Comment(
+                                data.getAuctionSystem().getAuthenticatedUser(),
+                                commentField.getText(),
+                                LocalDateTime.now()
+                        )
+                );
+                commentField.setText("");
+                setData(listing);
+            }
+        });
+
+    }
+}

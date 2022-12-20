@@ -1,248 +1,40 @@
 [
   {
-    "id": 1,
+    "id": 8,
     "isActive": true,
     "product": {
-      "name": "Volkswagen",
-      "description": "This is a adoececjeancjajnkcnjkae",
-      "category": "Temp Fencing, Decorative Fencing and Gates"
+      "name": "Rolex",
+      "description": "Submariner Reference 168000, a stainless steel automatic wristwatch with date, Circa 1988",
+      "category": "Watch"
     },
-    "startingPrice": 0.0,
-    "currentPrice": 67.0,
+    "startingPrice": 11000.0,
+    "currentPrice": 11000.0,
     "seller": {
-      "id": 17
+      "id": 27
     },
-    "winner": {
-      "id": 22
-    },
-    "bids": [
-      {
-        "amount": 100.0,
-        "bidder": {
-          "id": 1
-        },
-        "time": "2021-12-20T02:52:21"
-      },
-      {
-        "amount": 150.0,
-        "bidder": {
-          "id": 5
-        },
-        "time": "2021-12-20T02:52:21"
-      },
-      {
-        "amount": 20.0,
-        "bidder": {
-          "id": 4
-        },
-        "time": "2022-12-18T16:52:09.7001218"
-      },
-      {
-        "amount": 30.0,
-        "bidder": {
-          "id": 4
-        },
-        "time": "2022-12-18T16:52:14.8747665"
-      },
-      {
-        "amount": 56.0,
-        "bidder": {
-          "id": 4
-        },
-        "time": "2022-12-19T17:08:22.3348428"
-      },
-      {
-        "amount": 67.0,
-        "bidder": {
-          "id": 4
-        },
-        "time": "2022-12-19T17:08:27.1370211"
-      }
-    ],
-    "startTime": "2022-02-19T14:52:00",
-    "endTime": "2024-10-07T19:06:04",
-    "imageSrc": "E:\\Auction System\\src\\main\\resources\\io\\auctionsystem\\Images\\product.jpg",
-    "comments": [
-      {
-        "user": {
-          "id": 1
-        },
-        "message": "This is a comment",
-        "time": "2021-12-20T02:52:21"
-      },
-      {
-        "user": {
-          "id": 5
-        },
-        "message": "This is a comment",
-        "time": "2021-12-20T02:52:21"
-      },
-      {
-        "user": {
-          "id": 4
-        },
-        "message": "ok",
-        "time": "2022-12-19T11:28:22.9655818"
-      },
-      {
-        "user": {
-          "id": 4
-        },
-        "message": "ok",
-        "time": "2022-12-19T17:18:18.1083126"
-      }
-    ]
+    "bids": [],
+    "startTime": "2022-12-20T19:01:54.4544472",
+    "endTime": "2023-04-13T19:01:54.4544472",
+    "imageSrc": "8.gif",
+    "comments": []
   },
   {
-    "id": 2,
-    "isActive": false,
-    "product": {
-      "name": "Porsche",
-      "description": "This is a adoececjeancjajnkcnjkae",
-      "category": "Sitework \u0026 Site Utilities"
-    },
-    "startingPrice": 0.0,
-    "currentPrice": 0.0,
-    "seller": {
-      "id": 4
-    },
-    "winner": {
-      "id": 12
-    },
-    "bids": [
-      {
-        "amount": 100.0,
-        "bidder": {
-          "id": 1
-        },
-        "time": "2021-12-20T02:52:21"
-      },
-      {
-        "amount": 150.0,
-        "bidder": {
-          "id": 5
-        },
-        "time": "2021-12-20T02:52:21"
-      }
-    ],
-    "startTime": "2022-01-22T20:39:44",
-    "endTime": "2025-01-20T09:26:59",
-    "imageSrc": "E:\\Auction System\\src\\main\\resources\\io\\auctionsystem\\Images\\product.jpg",
-    "comments": [
-      {
-        "user": {
-          "id": 1
-        },
-        "message": "This is a comment",
-        "time": "2021-12-20T02:52:21"
-      },
-      {
-        "user": {
-          "id": 5
-        },
-        "message": "This is a comment",
-        "time": "2021-12-20T02:52:21"
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "isActive": false,
-    "product": {
-      "name": "Dodge",
-      "description": "This is a adoececjeancjajnkcnjkae",
-      "category": "Prefabricated Aluminum Metal Canopies"
-    },
-    "startingPrice": 0.0,
-    "currentPrice": 0.0,
-    "seller": {
-      "id": 13
-    },
-    "winner": {
-      "id": 23
-    },
-    "bids": [
-      {
-        "amount": 100.0,
-        "bidder": {
-          "id": 1
-        },
-        "time": "2021-12-20T02:52:21"
-      },
-      {
-        "amount": 150.0,
-        "bidder": {
-          "id": 5
-        },
-        "time": "2021-12-20T02:52:21"
-      }
-    ],
-    "startTime": "2022-02-04T18:37:28",
-    "endTime": "2024-10-01T06:20:14",
-    "imageSrc": "E:\\Auction System\\src\\main\\resources\\io\\auctionsystem\\Images\\product.jpg",
-    "comments": [
-      {
-        "user": {
-          "id": 1
-        },
-        "message": "This is a comment",
-        "time": "2021-12-20T02:52:21"
-      },
-      {
-        "user": {
-          "id": 5
-        },
-        "message": "This is a comment",
-        "time": "2021-12-20T02:52:21"
-      },
-      {
-        "user": {
-          "id": 4
-        },
-        "message": "Ok This is a new comment",
-        "time": "2022-12-18T16:51:46.6214608"
-      },
-      {
-        "user": {
-          "id": 4
-        },
-        "message": "Nice",
-        "time": "2022-12-19T10:49:08.500609"
-      },
-      {
-        "user": {
-          "id": 4
-        },
-        "message": "Very Nice",
-        "time": "2022-12-19T10:49:16.7115804"
-      }
-    ]
-  },
-  {
-    "id": 0,
+    "id": 9,
     "isActive": true,
     "product": {
-      "name": "Rolls Royce",
-      "description": "This is my rolls royce phantom",
-      "category": "Car"
+      "name": "Rolex",
+      "description": "Datejust Reference 1601, a yellow gold and stainless steel automatic wristwatch with date, Circa 1969",
+      "category": "Watch"
     },
-    "startingPrice": 20000.0,
-    "currentPrice": 21000.0,
+    "startingPrice": 4380.0,
+    "currentPrice": 4380.0,
     "seller": {
-      "id": 4
+      "id": 27
     },
-    "bids": [
-      {
-        "amount": 21000.0,
-        "bidder": {
-          "id": 31
-        },
-        "time": "2022-12-19T22:30:04.9997237"
-      }
-    ],
-    "startTime": "2022-12-19T18:53:41.9820835",
-    "endTime": "2023-02-16T18:53:41.9830847",
-    "imageSrc": "E:\\Auction System\\src\\main\\resources\\io\\auctionsystem\\Images\\product.jpg",
+    "bids": [],
+    "startTime": "2022-12-20T19:03:52.0794892",
+    "endTime": "2023-01-04T19:03:52.0794892",
+    "imageSrc": "9.png",
     "comments": []
   }
 ]

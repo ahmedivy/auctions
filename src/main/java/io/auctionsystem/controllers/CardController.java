@@ -1,5 +1,6 @@
 package io.auctionsystem.controllers;
 
+import io.auctionsystem.classes.GsonHandling;
 import io.auctionsystem.classes.Listing;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -27,7 +28,7 @@ public class CardController {
         price.setText(String.valueOf(listing.getCurrentPrice()));
         totalBids.setText(String.valueOf(listing.getBids().size()));
         categoryLabel.setText(listing.getProduct().getCategory());
-        image.setImage(new Image(listing.getImageSrc()));
+        image.setImage(new Image(GsonHandling.imagesFolder + listing.getImageSrc()));
         timeLeft.setText(listing.getTimeLeft());
     }
 

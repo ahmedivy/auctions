@@ -17,6 +17,7 @@ import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 public class ListingController implements Initializable {
@@ -32,6 +33,8 @@ public class ListingController implements Initializable {
 
     @FXML
     private Label categoryLabel;
+    @FXML
+    private Label winnerLabel;
 
     @FXML
     private MFXTextField commentField;
@@ -68,6 +71,8 @@ public class ListingController implements Initializable {
 
     @FXML
     private Label userLabel;
+    @FXML
+    private MFXButton endnowButton;
 
     @FXML
     private MFXScrollPane commentsPane;
@@ -87,23 +92,43 @@ public class ListingController implements Initializable {
         descriptionLabel.setText(listing.getProduct().getDescription());
         priceLabel.setText(String.valueOf(listing.getCurrentPrice()));
         totalBidsLabel.setText(String.valueOf(listing.getBids().size()));
+        endnowButton.setVisible(false);
         categoryLabel.setText(listing.getProduct().getCategory());
-        image.setImage(new Image(listing.getImageSrc()));
-//        startLabel.setText(listing.getStartTime().format("dd/MM/yyyy HH:mm"));
-//        endLabel.setText(listing.getEndTime().format("dd/MM/yyyy HH:mm"));
+        image.setImage(new Image(GsonHandling.imagesFolder + listing.getImageSrc()));
+        startLabel.setText(listing.getStartTime().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
+        endLabel.setText(listing.getEndTime().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
         userLabel.setText(listing.getSeller().getName());
         activeLabel.setText(listing.isActive() ? "Active" : "Sold");
         popularNowLabel.setVisible(listing.getBids().size() > 5);
+        priceTagLabel.setText(listing.isActive() ? "Current Price" : "Sold Price");
+        winnerLabel.setVisible(false);
+
+        if (listing.getSeller().equals(data.getAuctionSystem().getAuthenticatedUser())) {
+            placeBidButton.setVisible(false);
+            bidField.setVisible(false);
+            popularNowLabel.setVisible(false);
+            endnowButton.setVisible(true);
+        }
         if (!listing.isActive()) {
-            priceLabel.setVisible(false);
-            priceTagLabel.setText(String.format("Winner is %s", listing.getWinner().getName()));
+            priceLabel.setVisible(true);
+            priceTagLabel.setText("Sold Price");
+            priceLabel.setText(String.valueOf(listing.getCurrentPrice()));
             bidField.setVisible(false);
             placeBidButton.setVisible(false);
             popularNowLabel.setVisible(false);
+            endnowButton.setVisible(false);
+            winnerLabel.setVisible(true);
+            winnerLabel.setText(
+                    listing.getWinner() != null
+                            ? String.format("Winner is %s", listing.getWinner().getName())
+                            : "No winner"
+            );
+            bidValidationLabel.setVisible(false);
         }
         VBox commentsBox = new VBox();
         commentsBox.setAlignment(Pos.TOP_LEFT);
         commentsBox.setSpacing(0);
+        commentsBox.setStyle("-fx-background-radius: 10");
         for (Comment comment:listing.getComments()) {
             FXMLLoader commentRoot = new FXMLLoader();
             commentRoot.setLocation(App.class.getResource("FXML/comment.fxml"));
@@ -155,5 +180,16 @@ public class ListingController implements Initializable {
             }
         });
 
+        endnowButton.setOnMouseClicked(event -> {
+            if (listing.getBids().size() > 0) {
+                listing.setWinner(listing.getBids().get(listing.getBids().size() - 1).getBidder());
+                listing.setActive(false);
+
+            } else {
+                listing.setActive(false);
+                listing.setWinner(null);
+            }
+            setData(listing);
+        });
     }
 }

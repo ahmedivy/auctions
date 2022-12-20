@@ -1,30 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import io.github.gleidson28.GNAvatarView?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="63.0" prefWidth="350.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.auctionsystem.controllers.CommentController">
+<AnchorPane prefHeight="63.0" prefWidth="332.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.auctionsystem.controllers.CommentController">
    <children>
-      <GNAvatarView fx:id="image" layoutX="14.0" layoutY="16.0" prefHeight="39.0" prefWidth="41.0" type="CIRCLE">
-         <image>
-            <Image url="@../Images/Icons/avatar.png" />
-         </image>
-      </GNAvatarView>
-      <Label fx:id="name" layoutX="62.0" layoutY="5.0" prefHeight="18.0" prefWidth="170.0" text="Ahmed Abdullah" textFill="#ffb700">
+      <Label fx:id="name" layoutX="22.0" layoutY="4.0" prefHeight="18.0" prefWidth="170.0" text="Ahmed Abdullah" textFill="#ffb700">
          <font>
             <Font name="Berlin Sans FB" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="message" alignment="TOP_LEFT" layoutX="62.0" layoutY="22.0" prefHeight="39.0" prefWidth="279.0" text="This is a long  comment text. It is used as comment component." textFill="WHITE" wrapText="true">
+      <Label fx:id="message" alignment="TOP_LEFT" layoutX="22.0" layoutY="23.0" prefHeight="39.0" prefWidth="297.0" text="This is a long  comment text. It is used as comment component." textFill="WHITE" wrapText="true">
          <font>
-            <Font name="Berlin Sans FB" size="15.0" />
+            <Font name="Times New Roman" size="15.0" />
          </font>
       </Label>
-      <Label fx:id="time" alignment="TOP_RIGHT" layoutX="225.0" layoutY="5.0" prefHeight="18.0" prefWidth="94.0" text="2 days ago" textFill="#b9b9b9">
+      <Label fx:id="time" alignment="TOP_RIGHT" layoutX="192.0" layoutY="5.0" prefHeight="18.0" prefWidth="130.0" text="2 days ago" textFill="#b9b9b9">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="12.0" />
          </font>

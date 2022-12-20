@@ -199,8 +199,6 @@ public class SignupController implements Initializable {
         zipField.getValidator().constraint("The zip code must be at least 5 characters long", zipField.textProperty().length().greaterThanOrEqualTo(5));
         countryField.getValidator().constraint("The country must be at least 2 characters long", countryField.textProperty().length().greaterThanOrEqualTo(2));
 
-        // usernameField.setLeadingIcon(new MFXIconWrapper("mfx-user", 16, Color.web("#4D4D4D"), 24));
-
         // Setting float mode to FLOATING
         usernameField.setFloatMode(FloatMode.BORDER);
         passwordField.setFloatMode(FloatMode.BORDER);

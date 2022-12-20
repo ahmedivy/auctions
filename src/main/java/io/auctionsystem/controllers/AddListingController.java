@@ -10,11 +10,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ResourceBundle;
 import io.auctionsystem.classes.Listing;
+import javafx.stage.FileChooser;
 
 public class AddListingController implements Initializable {
 
@@ -36,12 +40,23 @@ public class AddListingController implements Initializable {
     private MFXTextField startingprice;
 
     private final DataSingleton data = DataSingleton.getInstance();
+    private File imageFile;
+    private Listing listing;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         category.getItems().addAll("Car", "Jewelry", "Hand Bag", "Watch", "Fine Art", "Other");
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Select Image of Product");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif"));
+        chooseImageButton.setOnAction(event -> {
+            imageFile = fileChooser.showOpenDialog(null);
+            if (imageFile != null) {
+                imageLabel.setText(imageFile.getName());
+            }
+        });
         addButton.setOnMouseClicked(mouseEvent -> {
-            data.getAuctionSystem().addListing(new Listing(
+            listing = new Listing(
                     new Product(
                             name.getText(),
                             description.getText(),
@@ -51,8 +66,20 @@ public class AddListingController implements Initializable {
                     data.getAuctionSystem().getAuthenticatedUser(),
                     LocalDateTime.now(),
                     LocalDateTime.of(enddate.getValue(), LocalTime.now())
-            ));
-            addButton.getScene().getWindow();
+            );
+            data.getAuctionSystem().addListing(listing);
+            addButton.getScene().getWindow().hide();
+            String imageP = listing.getId() + "." + imageFile.getName().split("\\.")[1];
+            listing.setImageSrc(imageP);
+            try {
+                Files.copy(imageFile.toPath(),
+                        new File("src/main/resources/io/auctionsystem/data/images/" + imageP).toPath());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         });
+
+
     }
 }
+

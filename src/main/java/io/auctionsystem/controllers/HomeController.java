@@ -63,10 +63,17 @@ public class HomeController implements Initializable {
     private Label othersCat;
     @FXML
     private Label watchesCat;
+    @FXML
+    private Label usernameLabel;
+    @FXML
+    private MFXButton logoutButton;
+    @FXML
+    private AnchorPane mainSection;
     private final DataSingleton data = DataSingleton.getInstance();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        usernameLabel.setText(data.getAuctionSystem().getAuthenticatedUser().getName());
         refreshGridPane(data.getAuctionSystem().getListingsExcludingUser());
         addEventHandlers();
     }
@@ -88,20 +95,31 @@ public class HomeController implements Initializable {
         });
     }
 
+    public void backFromFile() {
+        mainSection.getChildren().clear();
+        mainSection.getChildren().add(secondaryBar);
+        mainSection.getChildren().add(scrollPane);
+    }
+
     public void addEventHandlers() {
         trendingButton.setOnMouseClicked(mouseEvent -> {
+            backFromFile();
             refreshGridPane(data.getAuctionSystem().getTrendingListings());
         });
         homeButton.setOnMouseClicked(mouseEvent -> {
+            backFromFile();
             refreshGridPane(data.getAuctionSystem().getListingsExcludingUser());
         });
         activeListingButton.setOnMouseClicked(mouseEvent -> {
+            backFromFile();
             refreshGridPane(data.getAuctionSystem().getActiveListings());
         });
         yourListingButton.setOnMouseClicked(mouseEvent -> {
+            backFromFile();
             refreshGridPane(data.getAuctionSystem().getUsersListings());
         });
         watchListButton.setOnMouseClicked(mouseEvent -> {
+            backFromFile();
             refreshGridPane(data.getAuctionSystem().getWatchList());
         });
         allCat.setOnMouseClicked(mouseEvent -> {
@@ -138,14 +156,13 @@ public class HomeController implements Initializable {
             }
         });
         profileButton.setOnMouseClicked(mouseEvent -> {
+            mainSection.getChildren().clear();
             try {
-                Stage stage = new Stage();
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(App.class.getResource("FXML/profile.fxml"));
                 AnchorPane root = loader.load();
-                stage.setScene(new Scene(root));
-                stage.show();
-            } catch (Exception e) {
+                mainSection.getChildren().add(root);
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         });
@@ -177,13 +194,22 @@ public class HomeController implements Initializable {
                 }
             });
         });
+        logoutButton.setOnMouseClicked(mouseEvent -> {
+            try {
+                data.getAuctionSystem().setAuthenticatedUser(null);
+                App.switchScene((Stage) logoutButton.getScene().getWindow(), "login.fxml", "Login");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
     }
 
     public void refreshGridPane(ArrayList<Listing> ls) {
         GridPane gridPane = new GridPane();
-        gridPane.setPadding(new Insets(20,20,20,20));
-        gridPane.setVgap(20);
-        gridPane.setHgap(20);
+        gridPane.setPadding(new Insets(15));
+        gridPane.setVgap(15);
+        gridPane.setHgap(15);
         scrollPane.setContent(gridPane);
         for(int i = 0; i < ls.size(); i++) {
             FXMLLoader loader = new FXMLLoader();
@@ -191,10 +217,9 @@ public class HomeController implements Initializable {
             try {
                 VBox vBox = loader.load();
                 CardController cardController = loader.getController();
-                ls.get(i).setImageSrc("E:\\Auction System\\src\\main\\resources\\io\\auctionsystem\\Images\\product.jpg");
                 cardController.setData(ls.get(i));
                 addListingPageHandler(vBox, ls.get(i));
-                gridPane.add(vBox, i % 3, i / 3);
+                gridPane.add(vBox, i % 2, i / 2);
             } catch (Exception e) {
                 e.printStackTrace();
             }

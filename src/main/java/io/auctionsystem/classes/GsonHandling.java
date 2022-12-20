@@ -15,6 +15,7 @@ public class GsonHandling {
     public static Gson gson;
     public static String usersFile = "src/main/resources/io/auctionsystem/Data/users.json";
     public static String listingsFile = "src/main/resources/io/auctionsystem/Data/listings.json";
+    public static String imagesFolder = "E:\\Auction System\\src\\main\\resources\\io\\auctionsystem\\Data\\Images\\";
     public static int UserIDCount = 0;
     public static int ListingIDCount = 0;
 
@@ -90,7 +91,7 @@ public class GsonHandling {
     public static void setUserIDCount(AuctionSystem data) {
         int max = 0;
         for (User user : data.getUsers()) {
-            max = Math.max(user.getId(), UserIDCount);
+            max = Math.max(user.getId(), max);
         }
         UserIDCount = ++max;
     }
@@ -98,7 +99,7 @@ public class GsonHandling {
     public static void setListingIDCount(AuctionSystem data) {
         int max = 0;
         for (Listing listing : data.getListings()) {
-            max = Math.max(listing.getId(), ListingIDCount);
+            max = Math.max(listing.getId(), max);
         }
         ListingIDCount = ++max;
     }

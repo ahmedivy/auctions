@@ -44,3 +44,7 @@
     -fx-background-radius: 10;
     -fx-text-alignment: center;
 }
+
+.scrollPane {
+    -fx-background-radius: 10;
+}

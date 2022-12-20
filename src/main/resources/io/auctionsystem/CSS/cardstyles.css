@@ -1,6 +1,8 @@
+
+
 .cardPane {
     -fx-background-color: white;
-    -fx-background-radius: 40;
+    -fx-background-radius: 10;
 }
 
 .cardPane:hover {

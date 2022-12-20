@@ -1,38 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import io.github.palexdev.materialfx.controls.MFXPaginatedTableView?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="800.0" prefWidth="1062.0" stylesheets="@../CSS/profilepagestyles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.auctionsystem.controllers.ProfileController">
    <children>
-      <Label layoutX="58.0" layoutY="55.0" prefHeight="56.0" prefWidth="922.0" text="Ahmed Abdullah">
+      <Label fx:id="name" layoutX="167.0" layoutY="52.0" prefHeight="56.0" prefWidth="501.0" text="Ahmed Abdullah">
          <font>
             <Font size="39.0" />
          </font>
       </Label>
-      <Label layoutX="58.0" layoutY="136.0" prefHeight="26.0" prefWidth="78.0" text="Username">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="58.0" layoutY="170.0" prefHeight="26.0" prefWidth="78.0" text="Email">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="58.0" layoutY="205.0" prefHeight="26.0" prefWidth="100.0" text="Phone Number">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="58.0" layoutY="242.0" prefHeight="26.0" prefWidth="100.0" text="Address">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <MFXPaginatedTableView fx:id="table" layoutX="58.0" layoutY="300.0" prefHeight="155.0" prefWidth="946.0" />
+      <MFXPaginatedTableView fx:id="table" layoutX="155.0" layoutY="428.0" prefHeight="174.0" prefWidth="692.0" />
+      <MFXTextField fx:id="nameField" allowEdit="false" floatingText="Name" layoutX="167.0" layoutY="151.0" prefHeight="50.0" prefWidth="278.0" styleClass="fields" text="Ahmed Abdullah" />
+      <MFXTextField fx:id="usernameField" allowEdit="false" floatingText="Username" layoutX="531.0" layoutY="151.0" prefHeight="50.0" prefWidth="278.0" styleClass="fields" text="ahmedivy" />
+      <MFXTextField fx:id="emailField" allowEdit="false" floatingText="Email" layoutX="167.0" layoutY="243.0" prefHeight="50.0" prefWidth="278.0" styleClass="fields" text="ahmadabdullah4919@gmail.con" />
+      <MFXTextField fx:id="phoneField" allowEdit="false" floatingText="Phone Number" layoutX="531.0" layoutY="243.0" prefHeight="50.0" prefWidth="278.0" styleClass="fields" text="03179947486" />
+      <MFXButton fx:id="editButton" layoutX="722.0" layoutY="67.0" styleClass="myButtons" text="Edit Profile" />
    </children>
 </AnchorPane>

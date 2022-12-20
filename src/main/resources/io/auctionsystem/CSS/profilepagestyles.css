@@ -1,0 +1,31 @@
+.mfx-paginated-table-view .default-footer .mfx-pagination {
+    -fx-background-color: #f5f5f5;
+    -fx-border-color: #e3e3e3;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-padding: 5px;
+}
+
+.fields {
+    -fx-padding: 10px;
+    -fx-border-color: #000000;
+    -fx-border-radius: 5px;
+    -fx-border-width: 2px;
+    -fx-pref-width: 278.0;
+    -fx-pref-height: 50.0;
+    -fx-font-family: "Times New Roman", sans-serif;
+    -fx-font-size: 16;
+}
+
+.fields .floating-text {
+    -fx-font-size: 15;
+    -fx-text-fill: #000000;
+    -fx-font-family: "Times New Roman", sans-serif;
+}
+
+.myButtons {
+    -fx-border-radius: 10px;
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: 'Varela Round', sans-serif;
+}

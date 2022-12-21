@@ -5,6 +5,7 @@ import io.github.palexdev.materialfx.controls.MFXRadioButton;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.ImageView;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -27,6 +28,8 @@ public class SortingMenuController implements Initializable {
     private MFXRadioButton radio6;
     @FXML
     private MFXButton okButton;
+    @FXML
+    private ImageView closeButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -52,5 +55,6 @@ public class SortingMenuController implements Initializable {
         radio6.setOnMouseClicked(mouseEvent -> {
             HomeController.currentSort = radio6.getText();
         });
+        closeButton.setOnMouseClicked(mouseEvent -> closeButton.getScene().getWindow().hide());
     }
 }

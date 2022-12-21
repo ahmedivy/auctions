@@ -1,0 +1,20 @@
+.fields .floating-text {
+    -fx-font-size: 15;
+    -fx-text-fill: #000000;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
+
+.fields {
+    -fx-padding: 10px;
+    -fx-border-color: #000000;
+    -fx-border-radius: 5px;
+    -fx-border-width: 2px;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
+
+.myButtons {
+    -fx-border-radius: 10px;
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: 'Varela Round', sans-serif;
+}

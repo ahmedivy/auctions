@@ -2,7 +2,6 @@ package io.auctionsystem.controllers;
 
 import io.auctionsystem.App;
 import io.auctionsystem.classes.DataSingleton;
-import io.auctionsystem.classes.GsonHandling;
 import io.auctionsystem.classes.Listing;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import javafx.fxml.FXML;
@@ -149,6 +148,7 @@ public class HomeController implements Initializable {
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(App.class.getResource("FXML/addListing.fxml"));
                 AnchorPane root = loader.load();
+                stage.initStyle(StageStyle.TRANSPARENT);
                 stage.setScene(new Scene(root));
                 stage.show();
             } catch (Exception e) {

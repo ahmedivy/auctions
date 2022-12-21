@@ -13,9 +13,10 @@ import java.util.HashMap;
 
 public class GsonHandling {
     public static Gson gson;
-    public static String usersFile = "src/main/resources/io/auctionsystem/Data/users.json";
-    public static String listingsFile = "src/main/resources/io/auctionsystem/Data/listings.json";
-    public static String imagesFolder = "E:\\Auction System\\src\\main\\resources\\io\\auctionsystem\\Data\\Images\\";
+    public static String usersHome = System.getProperty("user.home");
+    public static String usersFile = usersHome + "\\AuctionSystem\\users.json";
+    public static String listingsFile = usersHome + "\\AuctionSystem\\listings.json";
+    public static String imagesFolder = usersHome + "\\AuctionSystem\\images\\";
     public static int UserIDCount = 0;
     public static int ListingIDCount = 0;
 

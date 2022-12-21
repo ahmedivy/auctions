@@ -10,6 +10,7 @@ import javafx.css.PseudoClass;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -87,6 +88,16 @@ public class LoginController implements Initializable {
                 App.switchScene((Stage) forgotPassButton.getScene().getWindow(), "forgotPass.fxml", "Change Password | SoTheBuys");
             } catch (IOException e) {
                 e.printStackTrace();
+            }
+        });
+        usernameField.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
+            if (event.getCode().toString().equals("ENTER")) {
+                passwordField.setFocusTraversable(true);
+            }
+        });
+        passwordField.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
+            if (event.getCode().toString().equals("ENTER")) {
+                loginButton.fire();
             }
         });
     }

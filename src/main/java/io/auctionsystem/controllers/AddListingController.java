@@ -19,15 +19,17 @@ import java.time.LocalTime;
 import java.util.ResourceBundle;
 import io.auctionsystem.classes.Listing;
 import javafx.stage.FileChooser;
+import javafx.scene.image.ImageView;
 
 public class AddListingController implements Initializable {
-
     @FXML
     private MFXButton addButton;
     @FXML
     private MFXComboBox<String> category;
     @FXML
     private MFXButton chooseImageButton;
+    @FXML
+    private ImageView closeButton;
     @FXML
     private MFXTextField description;
     @FXML
@@ -38,6 +40,8 @@ public class AddListingController implements Initializable {
     private MFXTextField name;
     @FXML
     private MFXTextField startingprice;
+    @FXML
+    private Label validationLabel;
 
     private final DataSingleton data = DataSingleton.getInstance();
     private File imageFile;
@@ -45,6 +49,7 @@ public class AddListingController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        validationLabel.setVisible(false);
         category.getItems().addAll("Car", "Jewelry", "Hand Bag", "Watch", "Fine Art", "Other");
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Select Image of Product");
@@ -56,6 +61,15 @@ public class AddListingController implements Initializable {
             }
         });
         addButton.setOnMouseClicked(mouseEvent -> {
+            if (name.getText().isEmpty() ||
+                    description.getText().isEmpty() ||
+                    category.getValue().isEmpty() ||
+                    startingprice.getText().isEmpty() ||
+                    LocalDateTime.now().isAfter(enddate.getValue().atTime(LocalTime.MAX))) {
+                validationLabel.setVisible(true);
+                validationLabel.setText("Please fill all fields correctly");
+                return;
+            }
             listing = new Listing(
                     new Product(
                             name.getText(),
@@ -78,8 +92,7 @@ public class AddListingController implements Initializable {
                 throw new RuntimeException(e);
             }
         });
-
-
+        closeButton.setOnMouseClicked(mouseEvent -> closeButton.getScene().getWindow().hide());
     }
 }
 

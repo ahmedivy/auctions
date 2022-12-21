@@ -111,14 +111,5 @@ public class GsonHandling {
         return ListingIDCount++;
     }
 
-    public static void main(String[] args) {
-//        AuctionSystem data = new AuctionSystem();
-//        try {
-//            loadGson(data);
-//            saveGson(data);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-    }
 }
 

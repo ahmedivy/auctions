@@ -15,6 +15,7 @@ public class App extends Application {
     private final DataSingleton data = DataSingleton.getInstance();
     @Override
     public void start(Stage stage) throws IOException {
+        // Loading data in RAM
         GsonHandling.loadGson(data.getAuctionSystem());
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("FXML/login.fxml"));
         Scene scene = new Scene(fxmlLoader.load());

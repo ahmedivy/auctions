@@ -2,7 +2,6 @@ package io.auctionsystem.controllers;
 
 import io.auctionsystem.App;
 import io.auctionsystem.classes.DataSingleton;
-import io.auctionsystem.classes.GsonHandling;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXPasswordField;
 import io.github.palexdev.materialfx.controls.MFXTextField;

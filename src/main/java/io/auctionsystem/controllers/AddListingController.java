@@ -1,6 +1,7 @@
 package io.auctionsystem.controllers;
 
 import io.auctionsystem.classes.DataSingleton;
+import io.auctionsystem.classes.GsonHandling;
 import io.auctionsystem.classes.Product;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXComboBox;
@@ -42,7 +43,6 @@ public class AddListingController implements Initializable {
     private MFXTextField startingprice;
     @FXML
     private Label validationLabel;
-
     private final DataSingleton data = DataSingleton.getInstance();
     private File imageFile;
     private Listing listing;
@@ -87,7 +87,7 @@ public class AddListingController implements Initializable {
             listing.setImageSrc(imageP);
             try {
                 Files.copy(imageFile.toPath(),
-                        new File("src/main/resources/io/auctionsystem/data/images/" + imageP).toPath());
+                        new File(GsonHandling.imagesFolder + imageP).toPath());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

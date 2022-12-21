@@ -52,12 +52,6 @@ public class GsonHandling {
         ArrayList<Listing> listings = gson.fromJson(reader, new TypeToken<ArrayList<Listing>>(){}.getType());
         data.setListings(listings);
 
-        listings.forEach(listing -> {
-            System.out.println(listing);
-            listing.getBids().forEach(System.out::println);
-            listing.getComments().forEach(System.out::println);
-        });
-
         setListingIDCount(data);
         setUserIDCount(data);
 
@@ -72,6 +66,8 @@ public class GsonHandling {
 
         // Write Listings
         writer = Files.newBufferedWriter(Path.of(listingsFile));
+
+        // Using a custom serializers to avoid data repetition
         JsonSerializer<User> userSerializer = (user, typeOfSrc, context) -> {
             JsonObject jsonObject = new JsonObject();
             jsonObject.addProperty("id", user.getId());
@@ -80,6 +76,8 @@ public class GsonHandling {
         JsonSerializer<LocalDateTime> dateTimeSerializer = (dateTime, typeOfSrc, context) -> {
             return new JsonPrimitive(dateTime.format(DateTimeFormatter.ISO_DATE_TIME));
         };
+
+        // Registering the serializers
         gson = new GsonBuilder()
                 .registerTypeAdapter(User.class, userSerializer)
                 .registerTypeAdapter(LocalDateTime.class, dateTimeSerializer)
@@ -114,13 +112,13 @@ public class GsonHandling {
     }
 
     public static void main(String[] args) {
-        AuctionSystem data = new AuctionSystem();
-        try {
-            loadGson(data);
-            saveGson(data);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        AuctionSystem data = new AuctionSystem();
+//        try {
+//            loadGson(data);
+//            saveGson(data);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 }
 

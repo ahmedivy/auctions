@@ -102,6 +102,7 @@ public class HomeController implements Initializable {
         mainSection.getChildren().clear();
         mainSection.getChildren().add(secondaryBar);
         mainSection.getChildren().add(scrollPane);
+        mainSection.getChildren().add(sortButton);
     }
 
     public void addEventHandlers() {
@@ -136,11 +137,11 @@ public class HomeController implements Initializable {
         });
         bagsCat.setOnMouseClicked(mouseEvent -> {
             changePseudoClassofCats(bagsCat);
-            refreshGridPane(data.getAuctionSystem().getByCategory("Bags"));
+            refreshGridPane(data.getAuctionSystem().getByCategory("Hand Bag"));
         });
         carsCat.setOnMouseClicked(mouseEvent -> {
             changePseudoClassofCats(carsCat);
-            refreshGridPane(data.getAuctionSystem().getByCategory("Cars"));
+            refreshGridPane(data.getAuctionSystem().getByCategory("Car"));
         });
         fineArtCat.setOnMouseClicked(mouseEvent -> {
             changePseudoClassofCats(fineArtCat);
@@ -152,7 +153,7 @@ public class HomeController implements Initializable {
         });
         othersCat.setOnMouseClicked(mouseEvent -> {
             changePseudoClassofCats(othersCat);
-            refreshGridPane(data.getAuctionSystem().getByCategory("Others"));
+            refreshGridPane(data.getAuctionSystem().getByCategory("Other"));
         });
         watchesCat.setOnMouseClicked(mouseEvent -> {
             changePseudoClassofCats(watchesCat);
@@ -200,7 +201,7 @@ public class HomeController implements Initializable {
                     switch (currentSort) {
                         case "Price (Low to High)" ->
                                 currentListing.sort(Comparator.comparing(Listing::getCurrentPrice));
-                        case "Price: (High to Low)" ->
+                        case "Price (High to Low)" ->
                                 currentListing.sort(Comparator.comparing(Listing::getCurrentPrice).reversed());
                         case "Newest" -> currentListing.sort(Comparator.comparing(Listing::getStartTime).reversed());
                         case "Oldest" -> currentListing.sort(Comparator.comparing(Listing::getStartTime));

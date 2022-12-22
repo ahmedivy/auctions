@@ -52,7 +52,7 @@ public class LoginController implements Initializable {
                     System.out.println("Login Successful");
                     data.getAuctionSystem().setAuthenticatedUser(usernameField.getText(), passwordField.getText());
                     try {
-                        App.switchScene((Stage) loginButton.getScene().getWindow(), "home.fxml", "SoTheBuys");
+                        App.switchScene((Stage) loginButton.getScene().getWindow(), "home.fxml", "Home | Auction System");
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

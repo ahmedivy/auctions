@@ -4,6 +4,7 @@ import io.auctionsystem.App;
 import io.auctionsystem.classes.DataSingleton;
 import io.auctionsystem.classes.Listing;
 import io.github.palexdev.materialfx.controls.MFXButton;
+import javafx.css.PseudoClass;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -75,6 +76,8 @@ public class HomeController implements Initializable {
         usernameLabel.setText(data.getAuctionSystem().getAuthenticatedUser().getName());
         refreshGridPane(data.getAuctionSystem().getListingsExcludingUser());
         addEventHandlers();
+        homeButton.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), true);
+        allCat.pseudoClassStateChanged(PseudoClass.getPseudoClass("selectedCategory"), true);
     }
 
     public void addListingPageHandler(VBox node, Listing listing) {
@@ -86,6 +89,7 @@ public class HomeController implements Initializable {
                 AnchorPane root = loader.load();
                 ListingController listingController = loader.getController();
                 listingController.setData(listing);
+                stage.initStyle(StageStyle.TRANSPARENT);
                 stage.setScene(new Scene(root));
                 stage.show();
             } catch (Exception e) {
@@ -102,45 +106,57 @@ public class HomeController implements Initializable {
 
     public void addEventHandlers() {
         trendingButton.setOnMouseClicked(mouseEvent -> {
+            changePseudoClass(trendingButton);
             backFromFile();
             refreshGridPane(data.getAuctionSystem().getTrendingListings());
         });
         homeButton.setOnMouseClicked(mouseEvent -> {
+            changePseudoClass(homeButton);
             backFromFile();
             refreshGridPane(data.getAuctionSystem().getListingsExcludingUser());
         });
         activeListingButton.setOnMouseClicked(mouseEvent -> {
+            changePseudoClass(activeListingButton);
             backFromFile();
             refreshGridPane(data.getAuctionSystem().getActiveListings());
         });
         yourListingButton.setOnMouseClicked(mouseEvent -> {
+            changePseudoClass(yourListingButton);
             backFromFile();
             refreshGridPane(data.getAuctionSystem().getUsersListings());
         });
         watchListButton.setOnMouseClicked(mouseEvent -> {
+            changePseudoClass(watchListButton);
             backFromFile();
             refreshGridPane(data.getAuctionSystem().getWatchList());
         });
         allCat.setOnMouseClicked(mouseEvent -> {
+            changePseudoClassofCats(allCat);
             refreshGridPane(data.getAuctionSystem().getListingsExcludingUser());
         });
         bagsCat.setOnMouseClicked(mouseEvent -> {
+            changePseudoClassofCats(bagsCat);
             refreshGridPane(data.getAuctionSystem().getByCategory("Bags"));
         });
         carsCat.setOnMouseClicked(mouseEvent -> {
+            changePseudoClassofCats(carsCat);
             refreshGridPane(data.getAuctionSystem().getByCategory("Cars"));
         });
         fineArtCat.setOnMouseClicked(mouseEvent -> {
+            changePseudoClassofCats(fineArtCat);
             refreshGridPane(data.getAuctionSystem().getByCategory("Fine Art"));
         });
         jewelryCat.setOnMouseClicked(mouseEvent -> {
+            changePseudoClassofCats(jewelryCat);
             refreshGridPane(data.getAuctionSystem().getByCategory("Jewelry"));
         });
         othersCat.setOnMouseClicked(mouseEvent -> {
+            changePseudoClassofCats(othersCat);
             refreshGridPane(data.getAuctionSystem().getByCategory("Others"));
         });
         watchesCat.setOnMouseClicked(mouseEvent -> {
-            refreshGridPane(data.getAuctionSystem().getByCategory("Watches"));
+            changePseudoClassofCats(watchesCat);
+            refreshGridPane(data.getAuctionSystem().getByCategory("Watch"));
         });
         sellButton.setOnMouseClicked(mouseEvent -> {
             try {
@@ -156,6 +172,7 @@ public class HomeController implements Initializable {
             }
         });
         profileButton.setOnMouseClicked(mouseEvent -> {
+            changePseudoClass(profileButton);
             mainSection.getChildren().clear();
             try {
                 FXMLLoader loader = new FXMLLoader();
@@ -205,6 +222,26 @@ public class HomeController implements Initializable {
 
     }
 
+    public void changePseudoClass(HBox button) {
+        trendingButton.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);
+        homeButton.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);
+        activeListingButton.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);
+        yourListingButton.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);
+        watchListButton.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);
+        profileButton.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), false);
+        button.pseudoClassStateChanged(PseudoClass.getPseudoClass("selected"), true);
+    }
+
+    public void changePseudoClassofCats (Label label) {
+        allCat.pseudoClassStateChanged(PseudoClass.getPseudoClass("selectedCategory"), false);
+        bagsCat.pseudoClassStateChanged(PseudoClass.getPseudoClass("selectedCategory"), false);
+        carsCat.pseudoClassStateChanged(PseudoClass.getPseudoClass("selectedCategory"), false);
+        fineArtCat.pseudoClassStateChanged(PseudoClass.getPseudoClass("selectedCategory"), false);
+        jewelryCat.pseudoClassStateChanged(PseudoClass.getPseudoClass("selectedCategory"), false);
+        othersCat.pseudoClassStateChanged(PseudoClass.getPseudoClass("selectedCategory"), false);
+        watchesCat.pseudoClassStateChanged(PseudoClass.getPseudoClass("selectedCategory"), false);
+        label.pseudoClassStateChanged(PseudoClass.getPseudoClass("selectedCategory"), true);
+    }
     public void refreshGridPane(ArrayList<Listing> ls) {
         GridPane gridPane = new GridPane();
         gridPane.setPadding(new Insets(15));

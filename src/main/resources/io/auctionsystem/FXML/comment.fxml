@@ -6,12 +6,12 @@
 
 <AnchorPane prefHeight="63.0" prefWidth="332.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.auctionsystem.controllers.CommentController">
    <children>
-      <Label fx:id="name" layoutX="22.0" layoutY="4.0" prefHeight="18.0" prefWidth="170.0" text="Ahmed Abdullah" textFill="#ffb700">
+      <Label fx:id="name" layoutX="14.0" layoutY="5.0" prefHeight="18.0" prefWidth="170.0" text="Ahmed Abdullah" textFill="#ffb700">
          <font>
             <Font name="Berlin Sans FB" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="message" alignment="TOP_LEFT" layoutX="22.0" layoutY="23.0" prefHeight="39.0" prefWidth="297.0" text="This is a long  comment text. It is used as comment component." textFill="WHITE" wrapText="true">
+      <Label fx:id="message" alignment="TOP_LEFT" layoutX="14.0" layoutY="23.0" prefHeight="39.0" prefWidth="313.0" text="This is a long  comment text. It is used as comment component." textFill="WHITE" wrapText="true">
          <font>
             <Font name="Times New Roman" size="15.0" />
          </font>

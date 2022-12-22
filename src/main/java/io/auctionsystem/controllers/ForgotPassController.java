@@ -92,7 +92,7 @@ public class ForgotPassController implements Initializable {
 
         signupButton.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
             try {
-                App.switchScene((Stage) signupButton.getScene().getWindow(), "signup.fxml", "Sign Up | SoTheBuys");
+                App.switchScene((Stage) signupButton.getScene().getWindow(), "signup.fxml", "Sign Up | Auction System");
             } catch (IOException e) {
                 e.printStackTrace();
             }

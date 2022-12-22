@@ -18,9 +18,10 @@
 }
 
 .categoryLabel {
-    -fx-background-color: #b08b29;
+    -fx-background-color: #ffc42e;
     -fx-background-radius: 10;
     -fx-text-alignment: center;
+    -fx-font-family: 'Varela Round', sans-serif;
 }
 
 .popularLabel {
@@ -28,4 +29,17 @@
     -fx-text-fill: white;
     -fx-background-radius: 10;
     -fx-text-alignment: center;
+    -fx-font-family: 'Varela Round', sans-serif;
+}
+
+.labels {
+    -fx-font-family: 'Varela Round', sans-serif;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+}
+
+.titleCard {
+    -fx-font-weight: bold;
+    -fx-font-size: 30;
+    -fx-font-family: "Varela Round", sans-serif;
 }

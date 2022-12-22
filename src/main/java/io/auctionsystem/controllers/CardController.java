@@ -25,8 +25,8 @@ public class CardController {
 
     public void setData(Listing listing) {
         title.setText(listing.getProduct().getName());
-        price.setText(String.valueOf(listing.getCurrentPrice()));
-        totalBids.setText(String.valueOf(listing.getBids().size()));
+        price.setText((int) listing.getCurrentPrice() + " USD");
+        totalBids.setText(String.valueOf(listing.getBids().size()) + " bids");
         categoryLabel.setText(listing.getProduct().getCategory());
         image.setImage(new Image(GsonHandling.imagesFolder + listing.getImageSrc()));
         timeLeft.setText(listing.getTimeLeft());

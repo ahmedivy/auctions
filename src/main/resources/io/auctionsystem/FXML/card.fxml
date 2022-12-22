@@ -21,12 +21,12 @@
                   <Font name="Berlin Sans FB" size="21.0" />
                </font>
             </Label>
-            <Label fx:id="price" layoutX="396.0" layoutY="130.0" prefHeight="40.0" prefWidth="70.0" styleClass="labels" text="30.0 $">
+            <Label fx:id="price" layoutX="291.0" layoutY="124.0" prefHeight="40.0" prefWidth="146.0" styleClass="labels" text="30.0 USD">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="totalBids" layoutX="291.0" layoutY="171.0" prefHeight="22.0" prefWidth="129.0" styleClass="labels" text="Total Bids :   12">
+            <Label fx:id="totalBids" layoutX="291.0" layoutY="170.0" prefHeight="22.0" prefWidth="129.0" styleClass="labels" text="Total Bids :   12">
                <font>
                   <Font name="Berlin Sans FB" size="18.0" />
                </font>
@@ -36,18 +36,13 @@
                   <Font name="Berlin Sans FB" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="timeLeft" layoutX="376.0" layoutY="207.0" prefHeight="22.0" prefWidth="107.0" styleClass="labels" text="12 D 07 Hrs">
+            <Label fx:id="timeLeft" layoutX="371.0" layoutY="206.0" prefHeight="14.0" prefWidth="100.0" styleClass="labels" text="12 D 07 Hrs">
                <font>
                   <Font name="Berlin Sans FB Demi Bold" size="20.0" />
                </font>
             </Label>
             <Label fx:id="categoryLabel" alignment="CENTER" layoutX="395.0" layoutY="14.0" prefHeight="22.0" prefWidth="100.0" styleClass="categoryLabel" text="Category" />
             <Label fx:id="popularNowLabel" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="22.0" prefWidth="90.0" styleClass="popularLabel" text="Popular Now" />
-            <Label layoutX="291.0" layoutY="139.0" styleClass="labels" text="Current Price : ">
-               <font>
-                  <Font name="Berlin Sans FB Bold" size="18.0" />
-               </font>
-            </Label>
          </children>
       </AnchorPane>
    </children>

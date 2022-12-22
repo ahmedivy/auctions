@@ -2,6 +2,7 @@
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import java.lang.String?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
@@ -15,7 +16,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="972.0" prefWidth="1354.0" styleClass="root" stylesheets="@../CSS/styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.auctionsystem.controllers.HomeController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="972.0" prefWidth="1369.0" styleClass="root" stylesheets="@../CSS/styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.auctionsystem.controllers.HomeController">
    <top>
       <AnchorPane prefHeight="122.0" prefWidth="1354.0" styleClass="titlePane" BorderPane.alignment="CENTER">
          <children>
@@ -25,17 +26,17 @@
                   <Font name="Berlin Sans FB" size="54.0" />
                </font>
             </Label>
-            <Label layoutX="941.0" layoutY="41.0" text="Logged In as ">
+            <Label layoutX="969.0" layoutY="41.0" text="Logged In as ">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label fx:id="usernameLabel" layoutX="1072.0" layoutY="41.0" prefHeight="30.0" prefWidth="171.0" text="Ahmed Abdullah">
+            <Label fx:id="usernameLabel" layoutX="1096.0" layoutY="41.0" prefHeight="30.0" prefWidth="171.0" text="Ahmed Abdullah">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <MFXButton fx:id="logoutButton" layoutX="1252.0" layoutY="35.0" styleClass="goldButton" text="Log Out" />
+            <MFXButton fx:id="logoutButton" layoutX="1268.0" layoutY="35.0" styleClass="goldButton" text="Log Out" />
          </children>
       </AnchorPane>
    </top>
@@ -46,14 +47,14 @@
                <children>
                   <AnchorPane prefHeight="834.0" prefWidth="275.0">
                      <children>
-                        <HBox fx:id="homeButton" alignment="CENTER" layoutX="19.0" layoutY="87.0" prefHeight="38.0" prefWidth="238.0" spacing="20.0" styleClass="selected">
+                        <HBox fx:id="homeButton" alignment="CENTER" layoutX="19.0" layoutY="87.0" prefHeight="38.0" prefWidth="238.0" spacing="20.0" styleClass="menuItems">
                            <children>
                               <ImageView fitHeight="30.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../Images/Icons/home.png" />
                                  </image>
                               </ImageView>
-                              <Label prefHeight="26.0" prefWidth="166.0" text="Home" textFill="#ecc667">
+                              <Label prefHeight="26.0" prefWidth="166.0" text="Home" textFill="WHITE">
                                  <font>
                                     <Font name="Berlin Sans FB" size="21.0" />
                                  </font>
@@ -116,7 +117,7 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox fx:id="profileButton" alignment="CENTER" layoutX="14.0" layoutY="465.0" prefHeight="38.0" prefWidth="249.0" spacing="20.0" styleClass="menuItems">
+                        <HBox fx:id="profileButton" alignment="CENTER" layoutX="14.0" layoutY="457.0" prefHeight="38.0" prefWidth="249.0" spacing="20.0" styleClass="menuItems">
                            <children>
                               <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -130,8 +131,8 @@
                               </Label>
                            </children>
                         </HBox>
-                        <Separator layoutX="23.0" layoutY="542.0" prefHeight="0.0" prefWidth="227.0" />
-                        <MFXButton fx:id="sellButton" layoutX="81.0" layoutY="596.0" prefHeight="47.0" prefWidth="111.0" styleClass="goldButton" text="Sell">
+                        <Separator layoutX="23.0" layoutY="525.0" prefHeight="0.0" prefWidth="227.0" />
+                        <MFXButton fx:id="sellButton" layoutX="81.0" layoutY="565.0" prefHeight="47.0" prefWidth="111.0" styleClass="goldButton" text="Sell">
                            <textFill>
                               <LinearGradient endX="1.0" endY="1.0">
                                  <stops>
@@ -162,17 +163,45 @@
          <children>
             <HBox fx:id="secondaryBar" layoutX="7.0" prefHeight="86.0" prefWidth="864.0" spacing="15.0" style="-fx-padding: 20px;">
                <children>
-                  <Label fx:id="allCat" alignment="CENTER" prefHeight="42.0" prefWidth="114.0" styleClass="categories" text="All" />
-                  <Label fx:id="jewelryCat" alignment="CENTER" layoutX="30.0" layoutY="30.0" prefHeight="42.0" prefWidth="129.0" styleClass="categories" text="Jewelry" />
-                  <Label fx:id="watchesCat" alignment="CENTER" layoutX="120.0" layoutY="30.0" prefHeight="42.0" prefWidth="142.0" styleClass="categories" text="Watches" />
-                  <Label fx:id="bagsCat" alignment="CENTER" layoutX="211.0" layoutY="30.0" prefHeight="42.0" prefWidth="119.0" styleClass="categories" text="Bags" />
-                  <Label fx:id="fineArtCat" alignment="CENTER" layoutX="301.0" layoutY="30.0" prefHeight="42.0" prefWidth="138.0" styleClass="categories" text="Fine Art" />
-                  <Label fx:id="carsCat" alignment="CENTER" layoutX="392.0" layoutY="30.0" prefHeight="36.0" prefWidth="90.0" styleClass="categories" text="Cars" />
-                  <Label fx:id="othersCat" alignment="CENTER" layoutX="482.0" layoutY="30.0" prefHeight="42.0" prefWidth="98.0" styleClass="categories" text="Others" />
+                  <Label fx:id="allCat" alignment="CENTER" prefHeight="42.0" prefWidth="114.0" text="All">
+                     <styleClass>
+                        <String fx:value="categories" />
+                        <String fx:value="active" />
+                     </styleClass></Label>
+                  <Label fx:id="jewelryCat" alignment="CENTER" layoutX="30.0" layoutY="30.0" prefHeight="42.0" prefWidth="129.0" text="Jewelry">
+                     <styleClass>
+                        <String fx:value="categories" />
+                        <String fx:value="active" />
+                     </styleClass></Label>
+                  <Label fx:id="watchesCat" alignment="CENTER" layoutX="120.0" layoutY="30.0" prefHeight="42.0" prefWidth="142.0" text="Watches">
+                     <styleClass>
+                        <String fx:value="categories" />
+                        <String fx:value="active" />
+                     </styleClass></Label>
+                  <Label fx:id="bagsCat" alignment="CENTER" layoutX="211.0" layoutY="30.0" prefHeight="42.0" prefWidth="119.0" text="Bags">
+                     <styleClass>
+                        <String fx:value="categories" />
+                        <String fx:value="active" />
+                     </styleClass></Label>
+                  <Label fx:id="fineArtCat" alignment="CENTER" layoutX="301.0" layoutY="30.0" prefHeight="42.0" prefWidth="138.0" text="Fine Art">
+                     <styleClass>
+                        <String fx:value="categories" />
+                        <String fx:value="active" />
+                     </styleClass></Label>
+                  <Label fx:id="carsCat" alignment="CENTER" layoutX="392.0" layoutY="30.0" prefHeight="36.0" prefWidth="90.0" text="Cars">
+                     <styleClass>
+                        <String fx:value="categories" />
+                        <String fx:value="active" />
+                     </styleClass></Label>
+                  <Label fx:id="othersCat" alignment="CENTER" layoutX="482.0" layoutY="30.0" prefHeight="42.0" prefWidth="98.0" text="Others">
+                     <styleClass>
+                        <String fx:value="categories" />
+                        <String fx:value="active" />
+                     </styleClass></Label>
                </children>
             </HBox>
-            <MFXScrollPane fx:id="scrollPane" layoutX="1.0" layoutY="78.0" prefHeight="772.0" prefWidth="1062.0" styleClass="backPane" />
-            <MFXButton fx:id="sortButton" layoutX="962.0" layoutY="14.0" styleClass="goldButton" text="Sort By" />
+            <MFXScrollPane fx:id="scrollPane" layoutX="1.0" layoutY="78.0" prefHeight="772.0" prefWidth="1075.0" styleClass="backPane" />
+            <MFXButton fx:id="sortButton" layoutX="970.0" layoutY="22.0" styleClass="goldButton" text="Sort By" />
          </children>
       </AnchorPane>
    </center>

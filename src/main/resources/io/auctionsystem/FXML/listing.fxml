@@ -26,14 +26,14 @@
             <Font name="Berlin Sans FB" size="43.0" />
          </font>
       </Label>
-      <Label fx:id="priceTagLabel" layoutX="489.0" layoutY="129.0" prefHeight="42.0" prefWidth="117.0" text=" Current Price : ">
+      <Label fx:id="priceTagLabel" layoutX="489.0" layoutY="129.0" prefHeight="42.0" prefWidth="118.0" text=" Current Price : ">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font>
       </Label>
       <Label fx:id="priceLabel" layoutX="613.0" layoutY="129.0" prefHeight="42.0" prefWidth="117.0" text="100.0 $">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font>
       </Label>
       <Label layoutX="505.0" layoutY="403.0" prefHeight="35.0" prefWidth="278.0">
@@ -43,45 +43,40 @@
       </Label>
       <Label layoutX="490.0" layoutY="172.0" prefHeight="42.0" prefWidth="99.0" text=" Total Bids : ">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font>
       </Label>
       <Label fx:id="totalBidsLabel" layoutX="593.0" layoutY="172.0" prefHeight="42.0" prefWidth="56.0" text="17">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font>
       </Label>
       <MFXTextField fx:id="bidField" floatMode="BORDER" floatingText="  Place Bid  " layoutX="489.0" layoutY="355.0" prefHeight="28.0" prefWidth="206.0" styleClass="fields" />
       <MFXButton fx:id="placeBidButton" layoutX="718.0" layoutY="355.0" prefHeight="48.0" prefWidth="66.0" text="Place">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font></MFXButton>
       <Label layoutX="489.0" layoutY="214.0" prefHeight="42.0" prefWidth="118.0" text=" Started On : ">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font>
       </Label>
       <Label layoutX="489.0" layoutY="256.0" prefHeight="42.0" prefWidth="118.0" text=" End On : ">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font>
       </Label>
       <Label fx:id="startLabel" layoutX="600.0" layoutY="214.0" prefHeight="42.0" prefWidth="191.0" text="17/02/2022">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font>
       </Label>
       <Label fx:id="endLabel" layoutX="579.0" layoutY="256.0" prefHeight="42.0" prefWidth="163.0" text="17/02/2022">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="489.0" layoutY="298.0" prefHeight="42.0" prefWidth="99.0" text=" Category : ">
-         <font>
-            <Font name="Californian FB Bold" size="17.0" />
-         </font>
-      </Label>
-      <Label fx:id="categoryLabel" alignment="CENTER" layoutX="593.0" layoutY="311.0" prefHeight="22.0" prefWidth="107.0" styleClass="categoryLabel" text="Category" textFill="WHITE">
+      <Label fx:id="categoryLabel" alignment="CENTER" layoutX="707.0" layoutY="100.0" prefHeight="22.0" prefWidth="107.0" styleClass="categoryLabel" text="Category" textFill="WHITE">
          <font>
             <Font name="Berlin Sans FB" size="17.0" />
          </font>
@@ -98,52 +93,57 @@
       </Label>
       <Label fx:id="bidValidationLabel" layoutX="497.0" layoutY="411.0" prefHeight="18.0" prefWidth="293.0" text="This is validation Label" textFill="RED">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="54.0" layoutY="464.0" prefHeight="27.0" prefWidth="118.0" text="Listed By :">
+      <Label layoutX="54.0" layoutY="464.0" prefHeight="27.0" prefWidth="90.0" text="Listed By :">
          <font>
-            <Font name="Californian FB Bold" size="23.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font>
       </Label>
-      <Label fx:id="userLabel" layoutX="178.0" layoutY="466.0" prefHeight="23.0" prefWidth="278.0" text="Ahmed Abdullah">
+      <Label fx:id="userLabel" layoutX="144.0" layoutY="466.0" prefHeight="23.0" prefWidth="278.0" text="Ahmed Abdullah">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="MS Reference Sans Serif" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="54.0" layoutY="499.0" prefHeight="42.0" prefWidth="117.0" text="Description : ">
+      <Label layoutX="54.0" layoutY="509.0" prefHeight="42.0" prefWidth="117.0" text="Description : ">
          <font>
-            <Font name="Californian FB Bold" size="19.0" />
+            <Font name="Microsoft Sans Serif" size="19.0" />
          </font>
       </Label>
-      <Label fx:id="descriptionLabel" alignment="TOP_LEFT" layoutX="54.0" layoutY="552.0" prefHeight="150.0" prefWidth="376.0" text="This is a short discription text. It shows little about product. Its background and other things." wrapText="true">
+      <Label fx:id="descriptionLabel" alignment="TOP_LEFT" layoutX="54.0" layoutY="552.0" prefHeight="263.0" prefWidth="386.0" text="This is a short discription text. It shows little about product. Its background and other things." wrapText="true">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font>
       </Label>
-      <MFXScrollPane fx:id="commentsPane" layoutX="497.0" layoutY="476.0" prefHeight="274.0" prefWidth="350.0" styleClass="scrollPane" trackColor="#ffc800" />
-      <MFXTextField fx:id="commentField" floatMode="BORDER" floatingText="  Comment  " layoutX="503.0" layoutY="758.0" prefHeight="48.0" prefWidth="278.0" styleClass="fields">
+      <MFXScrollPane fx:id="commentsPane" layoutX="497.0" layoutY="476.0" prefHeight="274.0" prefWidth="358.0" styleClass="scrollPane" trackColor="#ffc800" />
+      <MFXTextField fx:id="commentField" floatMode="BORDER" floatingText="  Comment  " layoutX="503.0" layoutY="758.0" prefHeight="42.0" prefWidth="278.0" styleClass="fields">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font></MFXTextField>
-      <MFXButton fx:id="commentPostButton" layoutX="791.0" layoutY="758.0" prefHeight="48.0" prefWidth="66.0" text="Post">
+      <MFXButton fx:id="commentPostButton" layoutX="790.0" layoutY="763.0" prefHeight="48.0" prefWidth="66.0" text="Post">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font></MFXButton>
       <Label layoutX="497.0" layoutY="430.0" prefHeight="42.0" prefWidth="145.0" text="Comments ">
          <font>
-            <Font name="Californian FB Bold" size="25.0" />
+            <Font name="Microsoft Sans Serif" size="25.0" />
          </font>
       </Label>
       <MFXButton fx:id="endnowButton" layoutX="748.0" layoutY="256.0" text="End Now">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font>
       </MFXButton>
-      <Label fx:id="winnerLabel" layoutX="497.0" layoutY="361.0" prefHeight="35.0" prefWidth="303.0" text="Label">
+      <Label fx:id="winnerLabel" layoutX="490.0" layoutY="309.0" prefHeight="35.0" prefWidth="303.0" text="Label">
          <font>
-            <Font name="Californian FB Bold" size="17.0" />
+            <Font name="Microsoft Sans Serif" size="17.0" />
          </font>
       </Label>
+      <ImageView fx:id="closeButton" fitHeight="26.0" fitWidth="25.0" layoutX="845.0" layoutY="16.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Images/Icons/cross-circle.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

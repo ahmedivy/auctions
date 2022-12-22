@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-
 .root {
     -fx-font-family: 'Varela Round', sans-serif;
 }
@@ -15,6 +13,7 @@
 
 .menuItems{
     -fx-border-radius: 10;
+    -fx-background-radius: 7;
 }
 
 .menuItems:hover {
@@ -22,9 +21,11 @@
     -fx-border-radius: 10;
 }
 
-.selected {
-    -fx-text-fill: goldenrod;
+:selected {
+    -fx-background-color: #ffb600;
+    -fx-text-fill: black;
 }
+
 
 .goldButton {
     -fx-background-color: #ecc667;
@@ -42,6 +43,15 @@
     -fx-font-size: 15;
     -fx-font-weight: bold;
     -fx-padding: 10;
+}
+
+.categories:hover {
+    -fx-background-color: #bfbfbf;
+}
+
+.categories:selectedCategory {
+    -fx-background-color: black;
+    -fx-text-fill: white;
 }
 
 .backPane {
@@ -66,7 +76,7 @@
 }
 
 .categoryLabel {
-    -fx-background-color: #b08b29;
+    -fx-background-color: #ffc42e;
     -fx-background-radius: 10;
     -fx-text-alignment: center;
     -fx-font-family: 'Varela Round', sans-serif;

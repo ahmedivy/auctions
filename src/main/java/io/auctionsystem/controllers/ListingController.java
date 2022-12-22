@@ -24,62 +24,47 @@ public class ListingController implements Initializable {
 
     @FXML
     private Label activeLabel;
-
     @FXML
     private MFXTextField bidField;
-
     @FXML
     private Label bidValidationLabel;
-
     @FXML
     private Label categoryLabel;
     @FXML
     private Label winnerLabel;
-
     @FXML
     private MFXTextField commentField;
-
     @FXML
     private MFXButton commentPostButton;
-
     @FXML
     private Label descriptionLabel;
-
     @FXML
     private Label endLabel;
-
     @FXML
     private ImageView image;
-
     @FXML
     private MFXButton placeBidButton;
-
+    @FXML
+    private ImageView closeButton;
     @FXML
     private Label popularNowLabel;
 
     @FXML
     private Label priceLabel;
-
     @FXML
     private Label startLabel;
-
     @FXML
     private Label titleLabel;
-
     @FXML
     private Label totalBidsLabel;
-
     @FXML
     private Label userLabel;
     @FXML
     private MFXButton endnowButton;
-
     @FXML
     private MFXScrollPane commentsPane;
-
     @FXML
     private Label priceTagLabel;
-
     private final DataSingleton data = DataSingleton.getInstance();
 
     @Override
@@ -190,6 +175,9 @@ public class ListingController implements Initializable {
                 listing.setWinner(null);
             }
             setData(listing);
+        });
+        closeButton.setOnMouseClicked(event -> {
+            closeButton.getScene().getWindow().hide();
         });
     }
 }

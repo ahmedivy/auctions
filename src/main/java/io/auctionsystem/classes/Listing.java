@@ -169,6 +169,7 @@ public class Listing {
 
     public void addBid(Bid bid) {
         this.bids.add(bid);
+        this.currentPrice = bid.getAmount();
     }
 
     public void removeBid(Bid bid) {

@@ -142,6 +142,7 @@ public class ListingController implements Initializable {
                             )
                     );
                     bidValidationLabel.setText("Bid placed successfully");
+                    totalBidsLabel.setText(String.valueOf(listing.getBids().size()));
 
                 } else {
                     bidValidationLabel.setText("Bid must be greater than current price");

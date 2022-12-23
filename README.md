@@ -10,7 +10,7 @@ Welcome to the Auction System! This is a JavaFX application that allows users to
 
 ### About:
 This is a JavaFX project built on Maven. You can clone the repository and run it on your machine. Instead of using a database, this project stores data in the user's home directory in JSON format using the Google Gson library.
-There is a Sample Data folder in root folder, which you can download and paste in home directory to check project. The jar is also present in root of the repository.
+There is a Sample Data folder in root folder, which you can download and paste in home directory to check project. The jar is also present in root of the repo.
 
 ### Dependencies:
 - Material FX

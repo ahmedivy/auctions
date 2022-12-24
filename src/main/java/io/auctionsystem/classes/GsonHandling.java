@@ -14,17 +14,19 @@ import java.util.HashMap;
 public class GsonHandling {
     public static Gson gson;
     public static String usersHome = System.getProperty("user.home");
-    public static String usersFile = usersHome + "\\AuctionSystem\\users.json";
-    public static String listingsFile = usersHome + "\\AuctionSystem\\listings.json";
-    public static String imagesFolder = usersHome + "\\AuctionSystem\\images\\";
+    public static String dataDir = usersHome + File.separator + "AuctionSystem" + File.separator;
+    public static String usersFile = dataDir + "users.json";
+    public static String listingsFile = dataDir + "listings.json";
+    public static String imagesFolder = dataDir + "images" + File.separator;
     public static int UserIDCount = 0;
     public static int ListingIDCount = 0;
 
     public static void loadGson(AuctionSystem data) throws IOException {
-
+        validateFiles();
         gson = new Gson();
         Reader reader = Files.newBufferedReader(Path.of(usersFile));
-        ArrayList<User> users = gson.fromJson(reader, new TypeToken<ArrayList<User>>(){}.getType());
+        ArrayList<User> users = gson.fromJson(reader, new TypeToken<ArrayList<User>>() {
+        }.getType());
         data.setUsers(users);
         // Map users to ID
         HashMap<Integer, User> usersMap = new HashMap<>();
@@ -49,7 +51,8 @@ public class GsonHandling {
                 .registerTypeAdapter(User.class, usersDeserializer)
                 .registerTypeAdapter(LocalDateTime.class, dateTimeDeserializer)
                 .create();
-        ArrayList<Listing> listings = gson.fromJson(reader, new TypeToken<ArrayList<Listing>>(){}.getType());
+        ArrayList<Listing> listings = gson.fromJson(reader, new TypeToken<ArrayList<Listing>>() {
+        }.getType());
         data.setListings(listings);
 
         setListingIDCount(data);
@@ -111,5 +114,20 @@ public class GsonHandling {
         return ListingIDCount++;
     }
 
+    public static void validateFiles() throws IOException {
+        File file = new File(dataDir);
+        if (!file.exists()) {
+            file.mkdir();
+            Files.createDirectory(Path.of(imagesFolder));
+            Files.createFile(Path.of(usersFile));
+            Files.createFile(Path.of(listingsFile));
+            Writer writer = new FileWriter(Path.of(usersFile).toFile());
+            writer.write("[]");
+            writer.close();
+            writer = new FileWriter(Path.of(listingsFile).toFile());
+            writer.write("[]");
+            writer.close();
+        }
+    }
 }
 

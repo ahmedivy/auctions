@@ -9,9 +9,7 @@ Welcome to the Auction System! This is a JavaFX application that allows users to
 - Aqib Mughal
 
 ### About:
-This is a JavaFX project built on Maven. You can clone the repository and run it on your machine. Instead of using a database, this project stores data in the user's home directory in JSON format using the Google Gson library.
-There is a Sample Data folder in root folder, which you can download and paste in home directory to check project. The jar is also present in root of the repo.
-
+The Auction System is a simple auction application built with JavaFX. It allows users to list items for auction and bid on items. The system stores data and images of listings in Microsoft Azure and uses the Google Gson library to serialize and deserialize the data, which is stored in JSON format. The frontend of the application is designed using the Material FX library. In order to run the application, users will need to have Java 8 or above installed, as well as an Azure Storage account and the Google Gson and Material FX libraries. The application can be set up by cloning the repository, setting up the required libraries and dependencies, and running the main method in the Main.java file. The project is licensed under the MIT License.
 ### Dependencies:
 - Material FX
 - Google GSON

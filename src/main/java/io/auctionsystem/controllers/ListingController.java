@@ -73,6 +73,7 @@ public class ListingController implements Initializable {
     }
 
     public void setData(Listing listing) {
+        popularNowLabel.setVisible(listing.isPopular());
         titleLabel.setText(listing.getProduct().getName());
         descriptionLabel.setText(listing.getProduct().getDescription());
         priceLabel.setText(String.valueOf(listing.getCurrentPrice()));
@@ -89,6 +90,7 @@ public class ListingController implements Initializable {
         popularNowLabel.setVisible(listing.getBids().size() > 5);
         priceTagLabel.setText(listing.isActive() ? "Current Price" : "Sold Price");
         winnerLabel.setVisible(false);
+        bidValidationLabel.setVisible(false);
 
         if (listing.getSeller().equals(data.getAuctionSystem().getAuthenticatedUser())) {
             placeBidButton.setVisible(false);

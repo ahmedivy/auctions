@@ -42,6 +42,7 @@ public class GsonHandling {
         ArrayList<Listing> listings = gson.fromJson(listingsJson, new TypeToken<ArrayList<Listing>>() {}.getType());
         data.setListings(listings);
 
+        refreshListings(data);
         setListingIDCount(data);
         setUserIDCount(data);
     }
@@ -70,6 +71,16 @@ public class GsonHandling {
                 .create();
         content = gson.toJson(data.getListings());
         AzureAccess.updateBlob(content, "listings.json");
+    }
+
+    public static void refreshListings(AuctionSystem data) {
+        for (Listing listing : data.getListings()) {
+            if (listing.getEndTime().isBefore(LocalDateTime.now())) {
+                listing.setActive(false);
+                listing.setWinner(listing.getBids().size() > 0
+                        ? listing.getBids().get(listing.getBids().size() - 1).getBidder() : null);
+            }
+        }
     }
 
     public static void setUserIDCount(AuctionSystem data) {

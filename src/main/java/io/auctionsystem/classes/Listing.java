@@ -199,4 +199,8 @@ public class Listing {
     public int getTotalBids() {
         return this.bids.size();
     }
+
+    public boolean isPopular() {
+        return this.getTotalBids() > 8 && this.isActive;
+    }
 }

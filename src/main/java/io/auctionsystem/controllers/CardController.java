@@ -36,7 +36,9 @@ public class CardController {
         executorService.submit(() -> {
             image.setImage(new Image(AzureAccess.getBlobUrl(listing.getImageSrc())));
         });
-        timeLeft.setText(listing.getTimeLeft());
+        timeLeft.setText(listing.isActive()
+                ? "Ending In :  " + listing.getTimeLeft() : "Sold to " + listing.getWinner().getUsername());
+        popularNowLabel.setVisible(listing.isPopular());
     }
 
 }

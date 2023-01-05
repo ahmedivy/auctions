@@ -31,7 +31,7 @@
             <Font name="Microsoft Sans Serif" size="17.0" />
          </font>
       </Label>
-      <Label fx:id="priceLabel" layoutX="613.0" layoutY="129.0" prefHeight="42.0" prefWidth="117.0" text="100.0 $">
+      <Label fx:id="priceLabel" layoutX="613.0" layoutY="129.0" prefHeight="42.0" prefWidth="227.0" text="100.0 $">
          <font>
             <Font name="Microsoft Sans Serif" size="17.0" />
          </font>

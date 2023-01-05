@@ -30,6 +30,7 @@ public class App extends Application {
             // Save file
             try {
                 GsonHandling.saveGson(data.getAuctionSystem());
+                System.exit(0);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

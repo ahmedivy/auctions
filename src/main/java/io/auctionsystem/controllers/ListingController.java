@@ -79,7 +79,9 @@ public class ListingController implements Initializable {
         totalBidsLabel.setText(String.valueOf(listing.getBids().size()));
         endnowButton.setVisible(false);
         categoryLabel.setText(listing.getProduct().getCategory());
-        image.setImage(new Image(GsonHandling.imagesFolder + listing.getImageSrc()));
+        CardController.executorService.submit(() -> {
+            image.setImage(new Image(AzureAccess.getBlobUrl(listing.getImageSrc())));
+        });
         startLabel.setText(listing.getStartTime().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
         endLabel.setText(listing.getEndTime().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
         userLabel.setText(listing.getSeller().getName());
@@ -156,9 +158,9 @@ public class ListingController implements Initializable {
             if (commentField.getText().length() > 0) {
                 listing.getComments().add(
                         new Comment(
-                                data.getAuctionSystem().getAuthenticatedUser(),
-                                commentField.getText(),
-                                LocalDateTime.now()
+                            data.getAuctionSystem().getAuthenticatedUser(),
+                            commentField.getText(),
+                            LocalDateTime.now()
                         )
                 );
                 commentField.setText("");

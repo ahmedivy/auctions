@@ -2,10 +2,11 @@ module io.auctionsystem {
     requires javafx.controls;
     requires javafx.fxml;
 
+    requires org.slf4j;
     requires org.controlsfx.controls;
     requires MaterialFX;
     requires com.google.gson;
-    requires GNAvatarView;
+    requires com.azure.storage.blob;
 
     opens io.auctionsystem.classes to com.google.gson;
     opens io.auctionsystem to javafx.fxml;

@@ -13,34 +13,23 @@ import java.util.HashMap;
 
 public class GsonHandling {
     public static Gson gson;
-    public static String usersHome = System.getProperty("user.home");
-    public static String dataDir = usersHome + File.separator + "AuctionSystem" + File.separator;
-    public static String usersFile = dataDir + "users.json";
-    public static String listingsFile = dataDir + "listings.json";
-    public static String imagesFolder = dataDir + "images" + File.separator;
     public static int UserIDCount = 0;
     public static int ListingIDCount = 0;
 
     public static void loadGson(AuctionSystem data) throws IOException {
-        validateFiles();
         gson = new Gson();
-        Reader reader = Files.newBufferedReader(Path.of(usersFile));
-        ArrayList<User> users = gson.fromJson(reader, new TypeToken<ArrayList<User>>() {
-        }.getType());
+        String usersJson = AzureAccess.getJSONString("users");
+        ArrayList<User> users = gson.fromJson(usersJson, new TypeToken<ArrayList<User>>() {}.getType());
         data.setUsers(users);
         // Map users to ID
         HashMap<Integer, User> usersMap = new HashMap<>();
         for (User user : users) {
             usersMap.put(user.getId(), user);
         }
-        reader.close();
-
         // Load listings
-        reader = Files.newBufferedReader(Path.of(listingsFile));
         JsonDeserializer<User> usersDeserializer = (json, typeOfT, context) -> {
             JsonObject jsonObject = json.getAsJsonObject();
-            int id = jsonObject.get("id").getAsInt();
-            return usersMap.get(id);
+            return usersMap.get(jsonObject.get("id").getAsInt());
         };
         JsonDeserializer<LocalDateTime> dateTimeDeserializer = (json, typeOfT, context) -> {
             return LocalDateTime.parse(
@@ -51,25 +40,20 @@ public class GsonHandling {
                 .registerTypeAdapter(User.class, usersDeserializer)
                 .registerTypeAdapter(LocalDateTime.class, dateTimeDeserializer)
                 .create();
-        ArrayList<Listing> listings = gson.fromJson(reader, new TypeToken<ArrayList<Listing>>() {
-        }.getType());
+        String listingsJson = AzureAccess.getJSONString("listings");
+        ArrayList<Listing> listings = gson.fromJson(listingsJson, new TypeToken<ArrayList<Listing>>() {}.getType());
         data.setListings(listings);
 
         setListingIDCount(data);
         setUserIDCount(data);
-
     }
 
     public static void saveGson(AuctionSystem data) throws IOException {
-        // Write Users
-        Writer writer = Files.newBufferedWriter(Path.of(usersFile));
+        // Update Users
         gson = new GsonBuilder().setPrettyPrinting().create();
-        gson.toJson(data.getUsers(), writer);
-        writer.close();
-
-        // Write Listings
-        writer = Files.newBufferedWriter(Path.of(listingsFile));
-
+        String content = gson.toJson(data.getUsers());
+        AzureAccess.updateBlob(content, "users.json");
+        // Update Listings
         // Using a custom serializers to avoid data repetition
         JsonSerializer<User> userSerializer = (user, typeOfSrc, context) -> {
             JsonObject jsonObject = new JsonObject();
@@ -86,8 +70,8 @@ public class GsonHandling {
                 .registerTypeAdapter(LocalDateTime.class, dateTimeSerializer)
                 .setPrettyPrinting()
                 .create();
-        gson.toJson(data.getListings(), writer);
-        writer.close();
+        content = gson.toJson(data.getListings());
+        AzureAccess.updateBlob(content, "listings.json");
     }
 
     public static void setUserIDCount(AuctionSystem data) {
@@ -114,20 +98,10 @@ public class GsonHandling {
         return ListingIDCount++;
     }
 
-    public static void validateFiles() throws IOException {
-        File file = new File(dataDir);
-        if (!file.exists()) {
-            file.mkdir();
-            Files.createDirectory(Path.of(imagesFolder));
-            Files.createFile(Path.of(usersFile));
-            Files.createFile(Path.of(listingsFile));
-            Writer writer = new FileWriter(Path.of(usersFile).toFile());
-            writer.write("[]");
-            writer.close();
-            writer = new FileWriter(Path.of(listingsFile).toFile());
-            writer.write("[]");
-            writer.close();
-        }
-    }
 }
+
+
+
+
+
 

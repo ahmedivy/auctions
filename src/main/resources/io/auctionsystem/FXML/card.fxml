@@ -13,7 +13,7 @@
          <children>
             <ImageView fx:id="image" fitHeight="260.0" fitWidth="246.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" styleClass="image">
                <image>
-                  <Image url="@../Images/product.jpg" />
+                  <Image url="@../Images/sample.png" />
                </image>
             </ImageView>
             <Label fx:id="title" alignment="TOP_LEFT" layoutX="292.0" layoutY="36.0" prefHeight="98.0" prefWidth="206.0" styleClass="titleCard" text="Title" wrapText="true">

@@ -1,8 +1,6 @@
 package io.auctionsystem.controllers;
 
-import io.auctionsystem.classes.DataSingleton;
-import io.auctionsystem.classes.GsonHandling;
-import io.auctionsystem.classes.Product;
+import io.auctionsystem.classes.*;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXComboBox;
 import io.github.palexdev.materialfx.controls.MFXDatePicker;
@@ -18,7 +16,7 @@ import java.nio.file.Files;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ResourceBundle;
-import io.auctionsystem.classes.Listing;
+
 import javafx.stage.FileChooser;
 import javafx.scene.image.ImageView;
 
@@ -85,12 +83,13 @@ public class AddListingController implements Initializable {
             addButton.getScene().getWindow().hide();
             String imageP = listing.getId() + "." + imageFile.getName().split("\\.")[1];
             listing.setImageSrc(imageP);
-            try {
-                Files.copy(imageFile.toPath(),
-                        new File(GsonHandling.imagesFolder + imageP).toPath());
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+//            try {
+//                Files.copy(imageFile.toPath(),
+//                        new File(GsonHandling.imagesFolder + imageP).toPath());
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
+            AzureAccess.uploadBlob(imageFile, imageP);
         });
         closeButton.setOnMouseClicked(mouseEvent -> closeButton.getScene().getWindow().hide());
     }

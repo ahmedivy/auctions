@@ -1,7 +1,6 @@
 package io.auctionsystem.controllers;
 
 import io.auctionsystem.classes.AzureAccess;
-import io.auctionsystem.classes.GsonHandling;
 import io.auctionsystem.classes.Listing;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -10,7 +9,6 @@ import javafx.scene.image.ImageView;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 
 public class CardController {
     @FXML

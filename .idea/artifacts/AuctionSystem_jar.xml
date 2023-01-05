@@ -2,23 +2,182 @@
   <artifact type="jar" name="AuctionSystem:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/AuctionSystem_jar</output-path>
     <root id="archive" name="AuctionSystem.jar">
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      </element>
       <element id="module-output" name="AuctionSystem" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/github/Gleidson28/GNAvatarView/1.0.5/GNAvatarView-1.0.5.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/19/javafx-graphics-19-win.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/github/palexdev/materialfx/11.13.5/materialfx-11.13.5.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/19/javafx-fxml-19.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/19/javafx-base-19-win.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/19/javafx-controls-19-win.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/19/javafx-base-19.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/19/javafx-graphics-19.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/19/javafx-fxml-19-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-resolver-dns-classes-macos/4.1.81.Final/netty-resolver-dns-classes-macos-4.1.81.Final.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/19/javafx-controls-19.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-codec-socks/4.1.82.Final/netty-codec-socks-4.1.82.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-resolver-dns/4.1.81.Final/netty-resolver-dns-4.1.81.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-buffer/4.1.82.Final/netty-buffer-4.1.82.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-resolver-dns-native-macos/4.1.81.Final/netty-resolver-dns-native-macos-4.1.81.Final-osx-x86_64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/projectreactor/reactor-core/3.4.23/reactor-core-3.4.23.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/19/javafx-fxml-19-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-classes-kqueue/4.1.82.Final/netty-transport-classes-kqueue-4.1.82.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/projectreactor/netty/reactor-netty-http/1.0.23/reactor-netty-http-1.0.23.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-common/4.1.82.Final/netty-common-4.1.82.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-tcnative-boringssl-static/2.0.54.Final/netty-tcnative-boringssl-static-2.0.54.Final-osx-x86_64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-codec-http/4.1.82.Final/netty-codec-http-4.1.82.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-native-kqueue/4.1.82.Final/netty-transport-native-kqueue-4.1.82.Final-osx-x86_64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/19/javafx-graphics-19-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-classes-epoll/4.1.82.Final/netty-transport-classes-epoll-4.1.82.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/azure/azure-core/1.33.0/azure-core-1.33.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.13.4/jackson-datatype-jsr310-2.13.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-handler-proxy/4.1.82.Final/netty-handler-proxy-4.1.82.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-tcnative-boringssl-static/2.0.54.Final/netty-tcnative-boringssl-static-2.0.54.Final-linux-aarch_64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-tcnative-boringssl-static/2.0.54.Final/netty-tcnative-boringssl-static-2.0.54.Final-linux-x86_64.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.10/gson-2.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/19/javafx-fxml-19.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.13.4/jackson-core-2.13.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final-linux-x86_64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-tcnative-classes/2.0.54.Final/netty-tcnative-classes-2.0.54.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/projectreactor/netty/reactor-netty-core/1.0.23/reactor-netty-core-1.0.23.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/19/javafx-base-19.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/controlsfx/controlsfx/11.1.2/controlsfx-11.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-codec-dns/4.1.81.Final/netty-codec-dns-4.1.81.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/azure/azure-core-http-netty/1.12.6/azure-core-http-netty-1.12.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-tcnative-boringssl-static/2.0.54.Final/netty-tcnative-boringssl-static-2.0.54.Final-osx-aarch_64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.13.4/jackson-annotations-2.13.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-tcnative-boringssl-static/2.0.54.Final/netty-tcnative-boringssl-static-2.0.54.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-codec/4.1.82.Final/netty-codec-4.1.82.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-native-unix-common/4.1.82.Final/netty-transport-native-unix-common-4.1.82.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/azure/azure-storage-common/12.19.0/azure-storage-common-12.19.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.82.Final/netty-transport-4.1.82.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/azure/azure-storage-internal-avro/12.5.0/azure-storage-internal-avro-12.5.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/19/javafx-base-19-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.13.4/jackson-databind-2.13.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-resolver/4.1.82.Final/netty-resolver-4.1.82.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-codec-http2/4.1.82.Final/netty-codec-http2-4.1.82.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/github/palexdev/materialfx/11.13.5/materialfx-11.13.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-handler/4.1.82.Final/netty-handler-4.1.82.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/19/javafx-graphics-19.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-tcnative-boringssl-static/2.0.54.Final/netty-tcnative-boringssl-static-2.0.54.Final-windows-x86_64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/github/palexdev/virtualizedfx/11.2.6/virtualizedfx-11.2.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.13.4/jackson-dataformat-xml-2.13.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/azure/azure-storage-blob/12.20.0/azure-storage-blob-12.20.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/woodstox/woodstox-core/6.3.1/woodstox-core-6.3.1.jar" path-in-jar="/" />
+      <element id="library" level="project" name="Maven: com.azure:azure-core-http-netty:1.12.6" />
+      <element id="library" level="project" name="Maven: com.azure:azure-core:1.33.0" />
+      <element id="library" level="project" name="Maven: com.azure:azure-storage-blob:12.20.0" />
+      <element id="library" level="project" name="Maven: com.azure:azure-storage-common:12.19.0" />
+      <element id="library" level="project" name="Maven: com.azure:azure-storage-internal-avro:12.5.0" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.4" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.4" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.4" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.4" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.4" />
+      <element id="library" level="project" name="Maven: com.fasterxml.woodstox:woodstox-core:6.3.1" />
+      <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.10" />
+      <element id="library" level="project" name="Maven: io.github.palexdev:materialfx:11.13.5" />
+      <element id="library" level="project" name="Maven: io.github.palexdev:virtualizedfx:11.2.6" />
+      <element id="library" level="project" name="Maven: io.netty:netty-buffer:4.1.82.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-codec-dns:4.1.81.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-codec-http2:4.1.82.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-codec-http:4.1.82.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-codec-socks:4.1.82.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-codec:4.1.82.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-common:4.1.82.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-handler-proxy:4.1.82.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-handler:4.1.82.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-resolver-dns-classes-macos:4.1.81.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-resolver-dns-native-macos:osx-x86_64:4.1.81.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-resolver-dns:4.1.81.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-resolver:4.1.82.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-tcnative-boringssl-static:2.0.54.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-tcnative-boringssl-static:linux-aarch_64:2.0.54.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-tcnative-boringssl-static:linux-x86_64:2.0.54.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-tcnative-boringssl-static:osx-aarch_64:2.0.54.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-tcnative-boringssl-static:osx-x86_64:2.0.54.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-tcnative-boringssl-static:windows-x86_64:2.0.54.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-tcnative-classes:2.0.54.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-transport-classes-epoll:4.1.82.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-transport-classes-kqueue:4.1.82.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-transport-native-epoll:linux-x86_64:4.1.82.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-transport-native-kqueue:osx-x86_64:4.1.82.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-transport-native-unix-common:4.1.82.Final" />
+      <element id="library" level="project" name="Maven: io.netty:netty-transport:4.1.82.Final" />
+      <element id="library" level="project" name="Maven: io.projectreactor.netty:reactor-netty-core:1.0.23" />
+      <element id="library" level="project" name="Maven: io.projectreactor.netty:reactor-netty-http:1.0.23" />
+      <element id="library" level="project" name="Maven: io.projectreactor:reactor-core:3.4.23" />
+      <element id="library" level="project" name="Maven: org.apiguardian:apiguardian-api:1.1.2" />
+      <element id="library" level="project" name="Maven: org.codehaus.woodstox:stax2-api:4.2.1" />
+      <element id="library" level="project" name="Maven: org.controlsfx:controlsfx:11.1.2" />
+      <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-api:5.9.1" />
+      <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.9.1" />
+      <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-commons:1.9.1" />
+      <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-engine:1.9.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:19" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:win:19" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:19" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:win:19" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:19" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:win:19" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:19" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:win:19" />
+      <element id="library" level="project" name="Maven: org.opentest4j:opentest4j:1.2.0" />
+      <element id="library" level="project" name="Maven: org.reactivestreams:reactive-streams:1.0.4" />
+      <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.36" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-console-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-console-l1-2-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-datetime-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-debug-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-errorhandling-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-file-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-file-l1-2-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-file-l2-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-handle-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-heap-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-interlocked-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-libraryloader-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-localization-l1-2-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-memory-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-namedpipe-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-processenvironment-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-processthreads-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-processthreads-l1-1-1.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-profile-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-rtlsupport-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-string-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-synch-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-synch-l1-2-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-sysinfo-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-timezone-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-core-util-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-crt-conio-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-crt-convert-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-crt-environment-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-crt-filesystem-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-crt-heap-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-crt-locale-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-crt-math-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-crt-multibyte-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-crt-private-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-crt-process-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-crt-runtime-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-crt-stdio-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-crt-string-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-crt-time-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/api-ms-win-crt-utility-l1-1-0.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/decora_sse.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/fxplugins.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/glass.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/glib-lite.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/gstreamer-lite.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/javafx_font.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/javafx_iio.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/jfxmedia.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/jfxwebkit.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/msvcp140.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/msvcp140_1.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/msvcp140_2.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/prism_common.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/prism_d3d.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/prism_sw.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/ucrtbase.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/vcruntime140.dll" />
+      <element id="file-copy" path="C:/Program Files/Java/javafx-sdk-19/bin/vcruntime140_1.dll" />
     </root>
   </artifact>
 </component>

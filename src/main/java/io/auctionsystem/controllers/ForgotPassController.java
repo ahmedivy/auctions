@@ -2,6 +2,7 @@ package io.auctionsystem.controllers;
 
 import io.auctionsystem.App;
 import io.auctionsystem.classes.DataSingleton;
+import io.auctionsystem.classes.MailSender;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXPasswordField;
 import io.github.palexdev.materialfx.controls.MFXTextField;
@@ -49,9 +50,12 @@ public class ForgotPassController implements Initializable {
         codeField.setVisible(false);
         okButton.setVisible(false);
 
+        final String[] otp = new String[1];
+
         sendCodeButton.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
             if (data.getAuctionSystem().validateEmail(emailField.getText())) {
                 // Send Code
+                otp[0] = new MailSender(emailField.getText()).sendOtp();
                 unValidLabel.setVisible(false);
                 sendCodeButton.setText("Code Sent");
                 codeField.setVisible(true);
@@ -64,7 +68,7 @@ public class ForgotPassController implements Initializable {
         });
 
         codeField.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
-            if (codeField.getText().equals(String.valueOf(code))) {
+            if (codeField.getText().equals(otp[0])) {
                 confirmPasswordField.setVisible(true);
                 passwordField.setVisible(true);
                 okButton.setVisible(true);

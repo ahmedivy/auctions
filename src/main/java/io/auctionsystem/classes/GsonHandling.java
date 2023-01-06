@@ -45,6 +45,7 @@ public class GsonHandling {
         refreshListings(data);
         setListingIDCount(data);
         setUserIDCount(data);
+
     }
 
     public static void saveGson(AuctionSystem data) throws IOException {

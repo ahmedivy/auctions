@@ -1,5 +1,6 @@
 credentials.txt
 mailPass.txt
+out/
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/

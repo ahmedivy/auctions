@@ -21,3 +21,5 @@ The Auction System is a simple auction application built with JavaFX. It allows 
 ![Screenshot_20221223_123543](https://user-images.githubusercontent.com/119736412/209213209-44f59bc5-2232-4477-aef1-0d7c54be4552.png)
 ![Screenshot_20221223_123708](https://user-images.githubusercontent.com/119736412/209213240-95ed1806-f87d-4b04-bd27-cf1df6a7154c.png)
 
+### Repo Visualisation:
+![Repo Visualization](./diagram.svg)

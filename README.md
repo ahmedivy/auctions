@@ -5,7 +5,7 @@
 Welcome to the Auction System! This is a JavaFX application that allows users to sell products for auction, place bids on those products, and can comment on any product.
 
 ### Contributors:
-- Ahmed Abdullah
+- Ahmad Abdullah
 - Aqib Mughal
 
 ### About:
